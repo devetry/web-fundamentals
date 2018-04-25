@@ -6,12 +6,12 @@
 
         <title>Assignment: Blogz :: Unit 2: Web Fundamentals</title>
 
-        <link rel="stylesheet" href="https://education.launchcode.org/web-fundamentals/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://education.launchcode.org/web-fundamentals/css/highlight.launchcode.css">
-        <link rel="stylesheet" href="https://education.launchcode.org/web-fundamentals/css/main.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/highlight.launchcode.css">
+        <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="https://djwbyvgln9kts.cloudfront.net/launch_ed_style/custom.css">
     </head>
-    <body id='page-assignment-blogz'>
+    <body>
 
         <header class="navbar navbar-default navbar-fixed-top">
 
@@ -22,47 +22,47 @@
                         <a href="#" class="dropdown-toggle glyphicon glyphicon-menu-hamburger" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
                         <ul class="dropdown-menu">
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/classes/">
+                                    <a href="/classes/">
                                         Classes
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/studios/">
+                                    <a href="/studios/">
                                         Studios
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/tutorials/">
+                                    <a href="/tutorials/">
                                         Tutorials
                                     </a>
                                 </li>
                                                             <li class="active lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/assignments/">
+                                    <a href="/assignments/">
                                         Assignments
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/videos/">
+                                    <a href="/videos/">
                                         Videos
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/cheatsheets/">
+                                    <a href="/cheatsheets/">
                                         Cheatsheets
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/objectives/">
+                                    <a href="/objectives/">
                                         Objectives
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/issues/">
+                                    <a href="/issues/">
                                         Issues
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/about/">
+                                    <a href="/about/">
                                         About this Unit
                                     </a>
                                 </li>
@@ -76,17 +76,73 @@
                 
             </ul>
 
+
             <div>
-                <a class="navbar-brand site-title navbar-center" href="https://education.launchcode.org/web-fundamentals/">
+                <a class="navbar-brand site-title navbar-center" href="/">
                     <h1>Unit 2: Web Fundamentals</h1>
                 </a>
             </div>
 
             <div class="nav navbar-nav navbar-right">
-                <a class="navbar-brand dabomb" href="https://education.launchcode.org/web-fundamentals/"></a>
+                <a class="navbar-brand dabomb" href="/"></a>
             </div>
 
         </header>
+
+        <nav style="position:absolute; width: 180px; margin-top:64px">
+            <ul class="nav navbar-big-nav hidden-md hidden-sm hidden-xs">
+                                                            <li class=" lc-button">
+                            <a href="/classes/">
+                                Classes
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/studios/">
+                                Studios
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/tutorials/">
+                                Tutorials
+                            </a>
+                        </li>
+                                            <li class="active lc-button">
+                            <a href="/assignments/">
+                                Assignments
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/videos/">
+                                Videos
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/cheatsheets/">
+                                Cheatsheets
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/objectives/">
+                                Objectives
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/issues/">
+                                Issues
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/about/">
+                                About this Unit
+                            </a>
+                        </li>
+                                        <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch">Search This Site</a>
+                    </li>
+                            </ul>
+        </nav>
+
 
         <!-- Search Modal -->
         <div id="modalSearch" class="modal fade" role="dialog">
@@ -101,7 +157,7 @@
                 <div class="modal-body">
                     <script>
                       (function() {
-                        var cx = "014657181352409571810:wecoswt6tpe";
+                        var cx = "";
                         var gcse = document.createElement('script');
                         gcse.type = 'text/javascript';
                         gcse.async = true;
@@ -123,11 +179,11 @@
         <main class="container-fluid">
             <div class="row">
 
-                <section id="content" class="col-sm-offset-2 col-sm-8">
+                <section id="content" class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
                                         <h1>Assignment: Blogz</h1>
                     <p>In the last problem set we built a blog. We were able to persist data in the database and retrieve that data for display. However, there are still some serious feature gaps. We're going to fill those in now.</p>
 <p>In this assignment, we'll refactor and expand our codebase to make this a multi-user blog site. We'll add authentication, so that users have to log in to create posts. Additionally, users will have their own blogs page, and visitors will be able to view blogs by author, or they can view all blog posts on the site by all authors. And we'll still maintain the ability to view an individual blog entry by itself.</p>
-<p>Throughout the assignment, refer to the <a href="http://blogz-demo.appspot.com/" target="_blank">demo app</a> which models the functionality your app will have by the end of the assignment. Feel free to create an account, make a post or two, and poke around. Note that some of the urls won't match the ones that you have exactly, since we will be using query parameters which were not used in the demo app.</p>
+<p>Throughout the assignment, refer to the <a href="http://blogz-demo.appspot.com/">demo app</a> which models the functionality your app will have by the end of the assignment. Feel free to create an account, make a post or two, and poke around. Note that some of the urls won't match the ones that you have exactly, since we will be using query parameters which were not used in the demo app.</p>
 <p>This assignment is the culmination of everything you've learned so far in Unit 2. Therefore, it is quite large and may seem like a lot of work. Just remember to take it one step at a time, and work on one task at a time. Some of these tasks we'll work through together, and some will be left to you to implement. Also, the video lessons for <a href="../../videos/get-it-done/">Get It Done!</a> will be invaluable as you work through this assignment. If you forget how to do something or encounter a bug, reviewing those lessons will help you figure it out!</p>
 <p>Here are the steps we'll take as we build our impressive blog app:</p>
 <ul>
@@ -152,7 +208,7 @@
 <h2 id="project-setup">Project Setup</h2>
 <p>Since this assignment is a continuation of <em>Build-a-Blog</em>, we'll want to use the files we created in that assignment, but we don't want to alter that repository. We want a separate repository called <em>Blogz</em>. To accomplish this, take the following steps:</p>
 <ol>
-<li>At <a href="https://github.com/" target="_blank">GitHub.com</a>, create a new repository called <code>blogz</code>. Copy the URL for the repository.
+<li>At <a href="https://github.com/">GitHub.com</a>, create a new repository called <code>blogz</code>. Copy the URL for the repository.
 <aside class="aside-warning">
 <p>When creating the repository, be sure that you <strong>do not</strong> initialize it with a README, .gitignore, or license file. Doing so will make step 3 below more difficult.</p>
 </aside></li>
@@ -186,7 +242,9 @@ db.create_all()</code></pre>
 <li>
 <p>We'll have a <code>logout</code> function that handles a <code>POST</code> request to <code>/logout</code> and redirects the user to <code>/blog</code> after deleting the username from the session.</p>
 </li>
-<li>We will also, naturally, have to add a <code>User</code> class to make all this new functionality possible, which is what we'll tackle next after a brief explanation of use cases.</li>
+<li>
+<p>We will also, naturally, have to add a <code>User</code> class to make all this new functionality possible, which is what we'll tackle next after a brief explanation of use cases.</p>
+</li>
 </ul>
 <h3 id="a-note-about-use-cases">A Note About Use Cases</h3>
 <p><em>Use cases</em> help us break down our desired functionality into smaller, testable stories. Instead of just saying that we want our app to have a login feature, we further pare down what that means into example scenarios which we can then test one at a time. For instance, in this example we might break it down into the following three use cases:</p>
@@ -195,7 +253,7 @@ db.create_all()</code></pre>
 <li>User enters a username that is stored in the database with an incorrect password and is redirected to the <code>/login</code> page with a message that their password is incorrect.</li>
 <li>User tries to login with a username that is not stored in the database and is redirected to the <code>/login</code> page with a message that this username does not exist.</li>
 </ol>
-<p>This helps us define exactly what we want our app to do. It also makes it easier to break down our work into small, testable chunks. We will be using use cases informally in this assignment to make clear exactly what your app should do in different instances. If you want to learn more about how use cases are more formally used, read this <a href="https://www.usability.gov/how-to-and-tools/methods/use-cases.html" target="_blank">Usability.gov article</a>.</p>
+<p>This helps us define exactly what we want our app to do. It also makes it easier to break down our work into small, testable chunks. We will be using use cases informally in this assignment to make clear exactly what your app should do in different instances. If you want to learn more about how use cases are more formally used, read this <a href="https://www.usability.gov/how-to-and-tools/methods/use-cases.html">Usability.gov article</a>.</p>
 <h2 id="add-user-class">Add User Class</h2>
 <p>To get started, the first thing we'll want to do is add a <code>User</code> class and associated table to our app. It should have the following properties:</p>
 <ul>
@@ -205,7 +263,7 @@ db.create_all()</code></pre>
 <li><code>blogs</code> which signifies a relationship between the blog table and this user, thus binding this user with the blog posts they write.</li>
 </ul>
 <aside class="aside-note">
-<p>Feel free to reuse (with modifications) parts of the code from your <em>Get It Done!</em> app, or use <a href="https://github.com/LaunchCodeEducation/get-it-done/tree/d979a9991347431023d41abdd93891aedafc1f93" target="_blank">ours</a> since there are many similarities between that app and this one. Just make sure to modify it so that it matches the naming and functionality suggested in the assignment instructions on this page. And note that, as we mentioned in the video lessons, storing passwords directly in the database is <strong>NOT</strong> a good practice. We only do so in those video lessons and in this assignment because we have not yet covered hashing, which will be the subject of Class 13.</p>
+<p>Feel free to reuse (with modifications) parts of the code from your <em>Get It Done!</em> app, or use <a href="https://github.com/LaunchCodeEducation/get-it-done/tree/d979a9991347431023d41abdd93891aedafc1f93">ours</a> since there are many similarities between that app and this one. Just make sure to modify it so that it matches the naming and functionality suggested in the assignment instructions on this page. And note that, as we mentioned in the video lessons, storing passwords directly in the database is <strong>NOT</strong> a good practice. We only do so in those video lessons and in this assignment because we have not yet covered hashing, which will be the subject of Class 13.</p>
 </aside>
 <p>We'll also need to amend the <code>Blog</code> class in <code>main.py</code> (and in the database) so that it has a property called <code>owner_id</code> which is a foreign key linking the user's id to the blog post. And we'll need to amend the <code>Blog</code> constructor so that it takes in a user object (again, you can review the <em>Get It Done!</em> code for a reminder of how to do this). And think about what you'll need to do in your <code>/newpost</code> route handler function since there is a new parameter to consider when creating a blog entry.</p>
 <p>After we make these changes to our code, we'll need to drop and re-create our tables using a Python shell. If you need a reminder of this process, review the second and third bullet items <a href="../../studios/flicklist/6/#modify-flicklist-to-store-movie-ratings">here</a>. Make sure to <code>from main import db, Blog, User</code> at the start of your shell session.</p>
@@ -261,7 +319,7 @@ db.create_all()</code></pre>
 <p>Now we can see a list of all blogs by all users on the <code>/blog</code> page, but what if a visitor to the site only wants to see the blogs for a particular author? To make that easy for the visitor, let's add a &quot;Home&quot; page that will live at the route <code>/</code> and will display a list of the usernames for all the authors on the site. Make a template called <code>index.html</code> that displays this list, and in <code>main.py</code> create a route handler function for it (named <code>index</code> so that it is included in the allowed routes we listed above).</p>
 <h2 id="create-dynamic-user-pages">Create Dynamic User Pages</h2>
 <p>Just as we created a page to dynamically display individual blog posts in <a href="../build-a-blog/#display-individual-entries">Build-a-Blog</a>, we'll create a page to dynamically display the posts of each individual user. We'll use a <code>GET</code> request on the <code>/blog</code> path with a query parameter of <code>?user=userId</code> where &quot;userId&quot; is the integer matching the id of the user whose posts we want to feature. And we'll need to create a template for this page.</p>
-<p>There are three ways that users can reach this page and they all require that we make some changes to our templates. We will need to display, as a link, the username of the author of each blog post in a tagline on the individual blog entry page and on the <code>/blog</code> page. Check out our <a href="http://blogz-demo.appspot.com/" target="_blank">demo app</a> and see the line &quot;Written by...&quot; underneath the body of the blog posts.</p>
+<p>There are three ways that users can reach this page and they all require that we make some changes to our templates. We will need to display, as a link, the username of the author of each blog post in a tagline on the individual blog entry page and on the <code>/blog</code> page. Check out our <a href="http://blogz-demo.appspot.com/">demo app</a> and see the line &quot;Written by...&quot; underneath the body of the blog posts.</p>
 <aside class="aside-pro-tip">
 <p>If you fulfilled the second bonus mission in <a href="../build-a-blog/#bonus-missions">Build-a-Blog</a> using a <code>DateTime</code> column, then you can utilize that field here to also note when each post was created, alongside the author.</p>
 </aside>
@@ -279,7 +337,7 @@ db.create_all()</code></pre>
 <h2 id="bonus-missions">Bonus Missions</h2>
 <p>Before embarking on these bonus missions, make sure to commit and push your working code to GitHub!</p>
 <h3 id="add-pagination">Add Pagination</h3>
-<p>To limit the scrolling that users have to do if they visit a page with multiple blog posts on it, we'll implement pagination on our individual users page and our &quot;all blogs&quot; (<code>/blog</code>) page. The <em>Flask-SQLAlchemy</em> API makes this a fairly straightforward process. Review the documentation on pagination in the <a href="http://flask-sqlalchemy.pocoo.org/2.1/api/#utilities" target="_blank">Utilities</a> section and also the <a href="http://flask-sqlalchemy.pocoo.org/2.1/api/#models" target="_blank">Models</a>, which describes a <code>paginate</code> method that is part of the class <code>flask.ext.sqlalchemy.BaseQuery</code>.</p>
+<p>To limit the scrolling that users have to do if they visit a page with multiple blog posts on it, we'll implement pagination on our individual users page and our &quot;all blogs&quot; (<code>/blog</code>) page. The <em>Flask-SQLAlchemy</em> API makes this a fairly straightforward process. Review the documentation on pagination in the <a href="http://flask-sqlalchemy.pocoo.org/2.1/api/#utilities">Utilities</a> section and also the <a href="http://flask-sqlalchemy.pocoo.org/2.1/api/#models">Models</a>, which describes a <code>paginate</code> method that is part of the class <code>flask.ext.sqlalchemy.BaseQuery</code>.</p>
 <p>We recommend limiting posts to 5 per page.</p>
 <h3 id="add-hashing">Add Hashing</h3>
 <p>After completing the video lessons on hashing, come back to this assignment and refactor your code so that you utilize hashing instead of storing passwords directly.</p>
@@ -291,9 +349,10 @@ db.create_all()</code></pre>
         </main>
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="https://education.launchcode.org/web-fundamentals/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="https://education.launchcode.org/web-fundamentals/js/highlight.pack.js"></script>
-        <script type="text/javascript" src="https://education.launchcode.org/web-fundamentals/js/libgif.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="/js/libgif.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
 
         <script>
             $(function() {
@@ -304,17 +363,30 @@ db.create_all()</code></pre>
                 hljs.initHighlightingOnLoad();
             });
         </script>
-
         <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-            ga('create', "UA-78748330-3", 'auto');
-            ga('send', 'pageview');
-
+            $(function() {
+                window.checkboxWatcher = new Vue({
+                    el: '#content',
+                    data: function() {
+                        var storedValue = localStorage.getItem('completedChecks');
+                        console.log('storedValue', storedValue);
+                        var hydratedValue = storedValue ? JSON.parse(storedValue) : {};
+                        return {
+                            checks: hydratedValue,
+                        };
+                    },
+                    watch: {
+                        checks: {
+                            handler: function() {
+                                console.log('storing check state');
+                                localStorage.setItem('completedChecks', JSON.stringify(this.checks));
+                            },
+                            deep: true,
+                        },
+                    },
+                });
+            });
         </script>
-
+        
     </body>
 </html>

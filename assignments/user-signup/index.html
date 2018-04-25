@@ -6,12 +6,12 @@
 
         <title>Assignment: User Signup :: Unit 2: Web Fundamentals</title>
 
-        <link rel="stylesheet" href="https://education.launchcode.org/web-fundamentals/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://education.launchcode.org/web-fundamentals/css/highlight.launchcode.css">
-        <link rel="stylesheet" href="https://education.launchcode.org/web-fundamentals/css/main.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/highlight.launchcode.css">
+        <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="https://djwbyvgln9kts.cloudfront.net/launch_ed_style/custom.css">
     </head>
-    <body id='page-assignment-user-signup'>
+    <body>
 
         <header class="navbar navbar-default navbar-fixed-top">
 
@@ -22,47 +22,47 @@
                         <a href="#" class="dropdown-toggle glyphicon glyphicon-menu-hamburger" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
                         <ul class="dropdown-menu">
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/classes/">
+                                    <a href="/classes/">
                                         Classes
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/studios/">
+                                    <a href="/studios/">
                                         Studios
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/tutorials/">
+                                    <a href="/tutorials/">
                                         Tutorials
                                     </a>
                                 </li>
                                                             <li class="active lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/assignments/">
+                                    <a href="/assignments/">
                                         Assignments
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/videos/">
+                                    <a href="/videos/">
                                         Videos
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/cheatsheets/">
+                                    <a href="/cheatsheets/">
                                         Cheatsheets
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/objectives/">
+                                    <a href="/objectives/">
                                         Objectives
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/issues/">
+                                    <a href="/issues/">
                                         Issues
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/about/">
+                                    <a href="/about/">
                                         About this Unit
                                     </a>
                                 </li>
@@ -76,17 +76,73 @@
                 
             </ul>
 
+
             <div>
-                <a class="navbar-brand site-title navbar-center" href="https://education.launchcode.org/web-fundamentals/">
+                <a class="navbar-brand site-title navbar-center" href="/">
                     <h1>Unit 2: Web Fundamentals</h1>
                 </a>
             </div>
 
             <div class="nav navbar-nav navbar-right">
-                <a class="navbar-brand dabomb" href="https://education.launchcode.org/web-fundamentals/"></a>
+                <a class="navbar-brand dabomb" href="/"></a>
             </div>
 
         </header>
+
+        <nav style="position:absolute; width: 180px; margin-top:64px">
+            <ul class="nav navbar-big-nav hidden-md hidden-sm hidden-xs">
+                                                            <li class=" lc-button">
+                            <a href="/classes/">
+                                Classes
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/studios/">
+                                Studios
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/tutorials/">
+                                Tutorials
+                            </a>
+                        </li>
+                                            <li class="active lc-button">
+                            <a href="/assignments/">
+                                Assignments
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/videos/">
+                                Videos
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/cheatsheets/">
+                                Cheatsheets
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/objectives/">
+                                Objectives
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/issues/">
+                                Issues
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/about/">
+                                About this Unit
+                            </a>
+                        </li>
+                                        <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch">Search This Site</a>
+                    </li>
+                            </ul>
+        </nav>
+
 
         <!-- Search Modal -->
         <div id="modalSearch" class="modal fade" role="dialog">
@@ -101,7 +157,7 @@
                 <div class="modal-body">
                     <script>
                       (function() {
-                        var cx = "014657181352409571810:wecoswt6tpe";
+                        var cx = "";
                         var gcse = document.createElement('script');
                         gcse.type = 'text/javascript';
                         gcse.async = true;
@@ -123,7 +179,7 @@
         <main class="container-fluid">
             <div class="row">
 
-                <section id="content" class="col-sm-offset-2 col-sm-8">
+                <section id="content" class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
                                         <h1>Assignment: User Signup</h1>
                     <p>Your assignment is simply to create a user signup form where users provide a username, password, and, optionally, an email address. You must have an additional field to verify the password (the user must retype it exactly). Then you will validate the input and either redirect them to a welcome page, or provide error information if any input is invalid.</p>
 <h2 id="project-setup">Project Setup</h2>
@@ -132,7 +188,7 @@
 <pre><code class="language-nohighlight">(flask-env) $ touch main.py
 (flask-env) $ mkdir templates</code></pre>
 <h2 id="your-task">Your Task</h2>
-<p>Your page does not have to look exactly the same as <a href="https://launchcode-demos.appspot.com/signup" target="_blank">our version</a>, but you must have all the same functionality. Here's a summary of what is required:</p>
+<p>Your page does not have to look exactly the same as <a href="https://launchcode-demos.appspot.com/signup">our version</a>, but you must have all the same functionality. Here's a summary of what is required:</p>
 <ol>
 <li>
 <p>If the user's form submission is not valid, you should reject it and re-render the form with some feedback to inform the user of what they did wrong. The following things should trigger an error:</p>
@@ -152,7 +208,9 @@
 <li>
 <p>If all the input is valid, then you should show the user a welcome page that uses the username input to display a welcome message of: &quot;Welcome, [username]!&quot;</p>
 </li>
-<li>Use templates (one for the index/home page and one for the welcome page) to render the HTML for your web app.</li>
+<li>
+<p>Use templates (one for the index/home page and one for the welcome page) to render the HTML for your web app.</p>
+</li>
 </ol>
 <aside class="aside-note">
 <p>While we've covered how to specify different input types than just <code>text</code> (e.g., <code>password</code> and <code>email</code>), for this assignment <strong>do not use the email input type</strong>. Instead, just use <code>text</code>, which does not do any client-side validation. This will enable us to check that the server side validation is working by letting errors through the client side. You should, however, use <code>type='password'</code> for the password and password verification inputs, to hide the characters typed (this input type does not include any additional validation).</p>
@@ -162,9 +220,11 @@
 <h2 id="bonus-missions">Bonus Missions</h2>
 <ol>
 <li>
-<p>Use a <a href="https://docs.python.org/3/library/re.html" target="_blank">Regular Expression</a> (also called a regex) to validate the input fields. See this article about <a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">Regular Expressions</a> for more information.</p>
+<p>Use a <a href="https://docs.python.org/3/library/re.html">Regular Expression</a> (also called a regex) to validate the input fields. See this article about <a href="https://en.wikipedia.org/wiki/Regular_expression">Regular Expressions</a> for more information.</p>
 </li>
-<li>If you haven't already, refactor your templates so that you are using a base template for the boilerplate HTML that is needed for both the home page and the welcome page, and template extensions for the additional HTML your app uses.</li>
+<li>
+<p>If you haven't already, refactor your templates so that you are using a base template for the boilerplate HTML that is needed for both the home page and the welcome page, and template extensions for the additional HTML your app uses.</p>
+</li>
 </ol>
                                     </section>
 
@@ -172,9 +232,10 @@
         </main>
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="https://education.launchcode.org/web-fundamentals/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="https://education.launchcode.org/web-fundamentals/js/highlight.pack.js"></script>
-        <script type="text/javascript" src="https://education.launchcode.org/web-fundamentals/js/libgif.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="/js/libgif.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
 
         <script>
             $(function() {
@@ -185,17 +246,30 @@
                 hljs.initHighlightingOnLoad();
             });
         </script>
-
         <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-            ga('create', "UA-78748330-3", 'auto');
-            ga('send', 'pageview');
-
+            $(function() {
+                window.checkboxWatcher = new Vue({
+                    el: '#content',
+                    data: function() {
+                        var storedValue = localStorage.getItem('completedChecks');
+                        console.log('storedValue', storedValue);
+                        var hydratedValue = storedValue ? JSON.parse(storedValue) : {};
+                        return {
+                            checks: hydratedValue,
+                        };
+                    },
+                    watch: {
+                        checks: {
+                            handler: function() {
+                                console.log('storing check state');
+                                localStorage.setItem('completedChecks', JSON.stringify(this.checks));
+                            },
+                            deep: true,
+                        },
+                    },
+                });
+            });
         </script>
-
+        
     </body>
 </html>

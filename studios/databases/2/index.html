@@ -6,12 +6,12 @@
 
         <title>Studio: Databases Part 2 :: Unit 2: Web Fundamentals</title>
 
-        <link rel="stylesheet" href="https://education.launchcode.org/web-fundamentals/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://education.launchcode.org/web-fundamentals/css/highlight.launchcode.css">
-        <link rel="stylesheet" href="https://education.launchcode.org/web-fundamentals/css/main.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/highlight.launchcode.css">
+        <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="https://djwbyvgln9kts.cloudfront.net/launch_ed_style/custom.css">
     </head>
-    <body id='page-studio-databases-part-2'>
+    <body>
 
         <header class="navbar navbar-default navbar-fixed-top">
 
@@ -22,47 +22,47 @@
                         <a href="#" class="dropdown-toggle glyphicon glyphicon-menu-hamburger" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
                         <ul class="dropdown-menu">
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/classes/">
+                                    <a href="/classes/">
                                         Classes
                                     </a>
                                 </li>
                                                             <li class="active lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/studios/">
+                                    <a href="/studios/">
                                         Studios
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/tutorials/">
+                                    <a href="/tutorials/">
                                         Tutorials
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/assignments/">
+                                    <a href="/assignments/">
                                         Assignments
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/videos/">
+                                    <a href="/videos/">
                                         Videos
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/cheatsheets/">
+                                    <a href="/cheatsheets/">
                                         Cheatsheets
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/objectives/">
+                                    <a href="/objectives/">
                                         Objectives
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/issues/">
+                                    <a href="/issues/">
                                         Issues
                                     </a>
                                 </li>
                                                             <li class=" lc-button">
-                                    <a href="https://education.launchcode.org/web-fundamentals/about/">
+                                    <a href="/about/">
                                         About this Unit
                                     </a>
                                 </li>
@@ -76,17 +76,73 @@
                 
             </ul>
 
+
             <div>
-                <a class="navbar-brand site-title navbar-center" href="https://education.launchcode.org/web-fundamentals/">
+                <a class="navbar-brand site-title navbar-center" href="/">
                     <h1>Unit 2: Web Fundamentals</h1>
                 </a>
             </div>
 
             <div class="nav navbar-nav navbar-right">
-                <a class="navbar-brand dabomb" href="https://education.launchcode.org/web-fundamentals/"></a>
+                <a class="navbar-brand dabomb" href="/"></a>
             </div>
 
         </header>
+
+        <nav style="position:absolute; width: 180px; margin-top:64px">
+            <ul class="nav navbar-big-nav hidden-md hidden-sm hidden-xs">
+                                                            <li class=" lc-button">
+                            <a href="/classes/">
+                                Classes
+                            </a>
+                        </li>
+                                            <li class="active lc-button">
+                            <a href="/studios/">
+                                Studios
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/tutorials/">
+                                Tutorials
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/assignments/">
+                                Assignments
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/videos/">
+                                Videos
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/cheatsheets/">
+                                Cheatsheets
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/objectives/">
+                                Objectives
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/issues/">
+                                Issues
+                            </a>
+                        </li>
+                                            <li class=" lc-button">
+                            <a href="/about/">
+                                About this Unit
+                            </a>
+                        </li>
+                                        <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch">Search This Site</a>
+                    </li>
+                            </ul>
+        </nav>
+
 
         <!-- Search Modal -->
         <div id="modalSearch" class="modal fade" role="dialog">
@@ -101,7 +157,7 @@
                 <div class="modal-body">
                     <script>
                       (function() {
-                        var cx = "014657181352409571810:wecoswt6tpe";
+                        var cx = "";
                         var gcse = document.createElement('script');
                         gcse.type = 'text/javascript';
                         gcse.async = true;
@@ -123,7 +179,7 @@
         <main class="container-fluid">
             <div class="row">
 
-                <section id="content" class="col-sm-offset-2 col-sm-8">
+                <section id="content" class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
                                         <h1>Studio: Databases Part 2</h1>
                     <h2 id="walkthrough">Walkthrough</h2>
 <p>In this studio we'll be working in MAMP using the tool <em>phpMyAdmin</em>. We'll create a new user account and associated database for our movie-buff project. Then we'll import a <code>.sql</code> file and get the tables we'll use from that. Then we'll perform some queries on that data.</p>
@@ -139,7 +195,7 @@
 <p>Finally, press the small <em>Go</em> button at the bottom.</p>
 <h3 id="import-tables-from">Import Tables From <code>.sql</code></h3>
 <p>You should see the database name <code>movie-buff</code> on the left side. Double click on it to go into that database.</p>
-<p>Now, download this SQL file: <a href="https://www.dropbox.com/s/7qc2gnpdtz9uivq/movie-buff.sql?dl=1" target="_blank">movie-buff.sql</a>.</p>
+<p>Now, download this SQL file: <a href="https://www.dropbox.com/s/7qc2gnpdtz9uivq/movie-buff.sql?dl=1">movie-buff.sql</a>.</p>
 <p>Then click the <em>Import</em> tab. Browse your computer to find the <code>movie-buff.sql</code> file you downloaded (on a Mac it may be <code>movie-buff.sql.txt</code>). Leave all the default selections as they are (the blue boxes with checkmarks), so your screen should look like this:</p>
 <p><img src="images/import.png" alt="Import sql" /></p>
 <p>Now press the <em>Go</em> button at the bottom.</p>
@@ -155,8 +211,8 @@
 <p><img src="images/viewings.png" alt="Viewings table" /></p>
 <p>The purpose of this table is to keep track of &quot;who watched what when&quot;. The <em>who</em> is the <code>viewer_id</code>, which is a foreign key that references the <code>viewer_id</code> in the <code>viewers</code> table. The <em>what</em> is the <code>movie_id</code> which is a foreign key that references the <code>movie_id</code> in the <code>movies</code> table. And the <em>when</em> is of course the <code>date_viewed</code> column with a <code>date</code> data type. Each viewing of a movie by one of Sarah's friends is captured as a unique record.</p>
 <p>This kind of table is very common in relational database design. It has many virtues including that it clearly links the <code>movies</code> and <code>viewers</code> table together and it makes the database more maintainable. For instance, you might have chosen to make a <code>viewing</code> table where you actually list the movie title and the name of the viewer. But if you did that then anytime some of that information changes - say a friend gets married and changes last names - you would now have to update the name of the viewer in <em>both</em> the <code>viewers</code> table <em>and</em> the <code>viewings</code> table. With this design, any updates you make to either the <code>movies</code> or <code>viewers</code> table will be reflected automatically in the results from queries on the <code>viewings</code> table.</p>
-<p>Review this lesson from <a href="https://www.khanacademy.org/computing/computer-programming/sql/relational-queries-in-sql/a/splitting-data-into-related-tables" target="_blank">Khan Academy</a> for a more in-depth explanation of why we break tables up this way.</p>
-<p>If you get stuck on any of the tasks below, you can review lessons in <a href="https://www.khanacademy.org/computing/computer-programming/sql" target="_blank">Khan Academy</a> or <a href="https://www.w3schools.com/sql/default.asp" target="_blank">w3schools</a> to get ideas and remind yourself of the proper syntax.</p>
+<p>Review this lesson from <a href="https://www.khanacademy.org/computing/computer-programming/sql/relational-queries-in-sql/a/splitting-data-into-related-tables">Khan Academy</a> for a more in-depth explanation of why we break tables up this way.</p>
+<p>If you get stuck on any of the tasks below, you can review lessons in <a href="https://www.khanacademy.org/computing/computer-programming/sql">Khan Academy</a> or <a href="https://www.w3schools.com/sql/default.asp">w3schools</a> to get ideas and remind yourself of the proper syntax.</p>
 <h3 id="your-task">Your Task:</h3>
 <p>Sarah created these tables and inserted all the data into them, but she needs your help to run some queries. You can use the <em>SQL</em> tab in the <code>movie-buff</code> database to run queries. Just type your SQL statement(s) in the box and press the <em>Go</em> button.</p>
 <p><img src="images/sql.png" alt="SQL tab" /></p>
@@ -200,7 +256,9 @@ WHERE viewings.date_viewed &lt; '2010-01-01'</code></pre>
 <li>
 <p>What is the title of the first movie she loaned to a friend for viewing?</p>
 </li>
-<li>What is the first and last name of the person who viewed the last-viewed movie?</li>
+<li>
+<p>What is the first and last name of the person who viewed the last-viewed movie?</p>
+</li>
 </ol>
 <h4 id="bonus-missions">Bonus Missions</h4>
 <ol start="11">
@@ -210,7 +268,9 @@ WHERE viewings.date_viewed &lt; '2010-01-01'</code></pre>
 <li>
 <p>Find the email of everyone who has watched &quot;The Tango Lesson&quot;, so Sarah can email them and ask what they thought of it.</p>
 </li>
-<li>Sarah is hosting a Kurosawa film festival soon and needs an email list to send out invites. What are the full names and emails of all her friends who have watched any movie by Akira Kurosawa?</li>
+<li>
+<p>Sarah is hosting a Kurosawa film festival soon and needs an email list to send out invites. What are the full names and emails of all her friends who have watched any movie by Akira Kurosawa?</p>
+</li>
 </ol>
                                     </section>
 
@@ -218,9 +278,10 @@ WHERE viewings.date_viewed &lt; '2010-01-01'</code></pre>
         </main>
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="https://education.launchcode.org/web-fundamentals/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="https://education.launchcode.org/web-fundamentals/js/highlight.pack.js"></script>
-        <script type="text/javascript" src="https://education.launchcode.org/web-fundamentals/js/libgif.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="/js/libgif.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
 
         <script>
             $(function() {
@@ -231,17 +292,30 @@ WHERE viewings.date_viewed &lt; '2010-01-01'</code></pre>
                 hljs.initHighlightingOnLoad();
             });
         </script>
-
         <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-            ga('create', "UA-78748330-3", 'auto');
-            ga('send', 'pageview');
-
+            $(function() {
+                window.checkboxWatcher = new Vue({
+                    el: '#content',
+                    data: function() {
+                        var storedValue = localStorage.getItem('completedChecks');
+                        console.log('storedValue', storedValue);
+                        var hydratedValue = storedValue ? JSON.parse(storedValue) : {};
+                        return {
+                            checks: hydratedValue,
+                        };
+                    },
+                    watch: {
+                        checks: {
+                            handler: function() {
+                                console.log('storing check state');
+                                localStorage.setItem('completedChecks', JSON.stringify(this.checks));
+                            },
+                            deep: true,
+                        },
+                    },
+                });
+            });
         </script>
-
+        
     </body>
 </html>
