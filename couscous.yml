@@ -1,16 +1,16 @@
 template:
-    url: https://github.com/LaunchCodeEducation/Template-Light
+    url: https://github.com/devetry/Template-Light
     # directory: ../Template-Light
 
 # Base URL of the published website
-baseUrl: https://coding102.devetry.com
+# baseUrl: https://coding102.devetry.com
 
 # Used to link to the GitHub project
 github:
     user: Devetry
     repo: web-fundamentals
 
-metaTitle: LC101
+metaTitle: Devetry Coding Class
 siteTitle: 'Unit 2: Web Fundamentals'
 
 # Google Custom Search Engine ID
