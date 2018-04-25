@@ -5,13 +5,13 @@ currentMenu: classes
 
 ## Databases Part 2
 
-Now you should have a good grasp on basic SQL syntax and commands, as well as an understanding of how relational databases work. In this lesson, we'll install *MAMP* and learn how to use a **real** database on your computer through *phpMyAdmin*. We'll also expand our knowledge of SQL by working through some additional exercises at w3schools.  
+Now you should have a good grasp on basic SQL syntax and commands, as well as an understanding of how relational databases work. In this lesson, we'll install *MAMP* and learn how to use a **real** database on your computer through *phpMyAdmin*. We'll also expand our knowledge of SQL by working through some additional exercises at w3schools.
 
 
-Task | Resource Type | Link | Instructions
-|----|---------------|------|-------------|
-Do | Exercises | [w3schools SQL Database][w3c-sql] | Do all the lessons under _SQL Database_ from "SQL Create DB" through "SQL Hosting". Note that you will have already covered the lessons on Drop Table, Create Table, and Foreign Keys in the Class 7 Prep.
-Do | Interactive Course | [Khan Academy: Intro to SQL][sql-khan] | Complete all the lessons in: _Modifying databases with SQL_. Some of this content will overlap with what you learned in the **w3schools tutorial** above; that's okay - the added explanations and practice should help. Note that the UI is not wonderful, and the syntax checker can be finicky. Make sure you remember to use ";" to end **all** of your statements.
+Done |Task | Resource Type | Link | Instructions
+|----|-----|---------------|------|-------------|
+<input type="checkbox" v-model="checks.p8a" /> |Do | Exercises | [w3schools SQL Database][w3c-sql] | Do all the lessons under _SQL Database_ from "SQL Create DB" through "SQL Hosting". Note that you will have already covered the lessons on Drop Table, Create Table, and Foreign Keys in the Class 7 Prep.
+<input type="checkbox" v-model="checks.p8b" /> |Do | Interactive Course | [Khan Academy: Intro to SQL][sql-khan] | Complete all the lessons in: _Modifying databases with SQL_. Some of this content will overlap with what you learned in the **w3schools tutorial** above; that's okay - the added explanations and practice should help. Note that the UI is not wonderful, and the syntax checker can be finicky. Make sure you remember to use ";" to end **all** of your statements.
 
 ### Install MAMP
 

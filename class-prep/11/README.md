@@ -11,10 +11,10 @@ Cookies are part of the furniture of the Internet. You've surely heard the term 
 
 Additionally, we'll also learn how cookies can be used to enable sessions, as we've been using them to access user-specific data on the server-side.
 
-Task | Resource Type | Link | Instructions
-|----|---------------|------|-------------|
-Watch | Video Lessons | [Cookies](https://www.youtube.com/playlist?list=PLs5n5nYB22fLqBWEGW0dBh_yIHdzYlpEz) | Watch all videos in the playlist
-Watch | Video Lesson | [Cookies in Flask](../../videos/cookies-in-flask/) | Explore the dynamics of cookies, along with how they can be explicitly used in Flask
-Watch | Video Lesson | [Cookie-Based Sessions](../../videos/cookie-based-sessions/) | Learn how cookies are used for session management
-Read | Article | [An Overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#Basic_aspects_of_HTTP) | This article should be familiar, as it was part of the prep work for class 3. However, this is a good time to revisit it, as aspects of it should make much more sense in the context of cookies. In fact, we've linked you directly to the section that discuses HTTP state and cookies. Enjoy!
-Do | Review | [Class 11 Prep Review](review.html) | Solidify your knowledge of the concepts covered in these lessons
+Done |Task | Resource Type | Link | Instructions
+|----|-----|---------------|------|-------------|
+<input type="checkbox" v-model="checks.p11a" /> |Watch | Video Lessons | [Cookies](https://www.youtube.com/playlist?list=PLs5n5nYB22fLqBWEGW0dBh_yIHdzYlpEz) | Watch all videos in the playlist
+<input type="checkbox" v-model="checks.p11b" /> |Watch | Video Lesson | [Cookies in Flask](../../videos/cookies-in-flask/) | Explore the dynamics of cookies, along with how they can be explicitly used in Flask
+<input type="checkbox" v-model="checks.p11c" /> |Watch | Video Lesson | [Cookie-Based Sessions](../../videos/cookie-based-sessions/) | Learn how cookies are used for session management
+<input type="checkbox" v-model="checks.p11d" /> |Read | Article | [An Overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#Basic_aspects_of_HTTP) | This article should be familiar, as it was part of the prep work for class 3. However, this is a good time to revisit it, as aspects of it should make much more sense in the context of cookies. In fact, we've linked you directly to the section that discuses HTTP state and cookies. Enjoy!
+<input type="checkbox" v-model="checks.p11e" /> |Do | Review | [Class 11 Prep Review](review.html) | Solidify your knowledge of the concepts covered in these lessons

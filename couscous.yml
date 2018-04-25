@@ -3,21 +3,21 @@ template:
     # directory: ../Template-Light
 
 # Base URL of the published website
-baseUrl: https://education.launchcode.org/web-fundamentals
+baseUrl: https://coding102.devetry.com
 
 # Used to link to the GitHub project
 github:
-    user: LaunchCodeEducation
+    user: Devetry
     repo: web-fundamentals
 
 metaTitle: LC101
 siteTitle: 'Unit 2: Web Fundamentals'
 
 # Google Custom Search Engine ID
-cseId: 014657181352409571810:wecoswt6tpe
+# cseId: 014657181352409571810:wecoswt6tpe
 
 # Google Analytics ID
-gaId: UA-78748330-3
+# gaId: UA-78748330-3
 
 homeBg: https://launchcode.org/assets/cover_banner_blue-8152795f6794e4bbb9fae2a63ad5bb01.jpg
 
