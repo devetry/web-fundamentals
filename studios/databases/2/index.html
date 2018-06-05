@@ -294,6 +294,8 @@ WHERE viewings.date_viewed &lt; '2010-01-01'</code></pre>
         </script>
         <script>
             $(function() {
+                if (!location.pathname.match(/class-prep/)) return;
+
                 window.checkboxWatcher = new Vue({
                     el: '#content',
                     data: function() {

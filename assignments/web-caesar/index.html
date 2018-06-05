@@ -396,6 +396,8 @@ nothing added to commit but untracked files present (use "git add" to track)</co
         </script>
         <script>
             $(function() {
+                if (!location.pathname.match(/class-prep/)) return;
+
                 window.checkboxWatcher = new Vue({
                     el: '#content',
                     data: function() {

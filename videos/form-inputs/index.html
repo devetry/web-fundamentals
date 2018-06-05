@@ -207,6 +207,8 @@ View the <a href="http://gist.github.com/chrisbay/d905bad4eb4b3bb1a4421127e93c19
         </script>
         <script>
             $(function() {
+                if (!location.pathname.match(/class-prep/)) return;
+
                 window.checkboxWatcher = new Vue({
                     el: '#content',
                     data: function() {

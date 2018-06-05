@@ -349,6 +349,8 @@ python: can't open file 'main.py': [Errno 2] No such file or directory</code></p
         </script>
         <script>
             $(function() {
+                if (!location.pathname.match(/class-prep/)) return;
+
                 window.checkboxWatcher = new Vue({
                     el: '#content',
                     data: function() {

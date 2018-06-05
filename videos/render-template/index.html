@@ -228,6 +228,8 @@ return template.render(name=first_name)</code></pre></li>
         </script>
         <script>
             $(function() {
+                if (!location.pathname.match(/class-prep/)) return;
+
                 window.checkboxWatcher = new Vue({
                     el: '#content',
                     data: function() {

@@ -383,6 +383,8 @@ nothing to commit, working directory clean</code></pre>
         </script>
         <script>
             $(function() {
+                if (!location.pathname.match(/class-prep/)) return;
+
                 window.checkboxWatcher = new Vue({
                     el: '#content',
                     data: function() {

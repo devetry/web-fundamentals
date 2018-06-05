@@ -299,6 +299,8 @@ For those of you accustomed to accessing this via the command line, you will nee
         </script>
         <script>
             $(function() {
+                if (!location.pathname.match(/class-prep/)) return;
+
                 window.checkboxWatcher = new Vue({
                     el: '#content',
                     data: function() {

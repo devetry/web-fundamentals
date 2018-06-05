@@ -261,6 +261,8 @@ Switched to a new branch 'studio3'</code></pre>
         </script>
         <script>
             $(function() {
+                if (!location.pathname.match(/class-prep/)) return;
+
                 window.checkboxWatcher = new Vue({
                     el: '#content',
                     data: function() {

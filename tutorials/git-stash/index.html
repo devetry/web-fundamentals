@@ -261,6 +261,8 @@ Dropped refs/stash@{0} (cb556d3734ed8675b6b81f5d4e37d003bd1bc6b9)</code></pre>
         </script>
         <script>
             $(function() {
+                if (!location.pathname.match(/class-prep/)) return;
+
                 window.checkboxWatcher = new Vue({
                     el: '#content',
                     data: function() {

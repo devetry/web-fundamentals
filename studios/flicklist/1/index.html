@@ -273,6 +273,8 @@ $ git commit -m "Short, descriptive message here"</code></pre>
         </script>
         <script>
             $(function() {
+                if (!location.pathname.match(/class-prep/)) return;
+
                 window.checkboxWatcher = new Vue({
                     el: '#content',
                     data: function() {
