@@ -217,9 +217,7 @@ db = SQLAlchemy(app)</code></pre>
 <li><strong>Add import code:</strong> You will need to import <code>db</code> from <code>app.py</code> in the <code>models.py</code> file in order for the code in that file to function. And now, in order for <code>main.py</code> to utilize the <code>User</code> and <code>Movie</code> classes, you will need to import them into <code>main.py</code>. Finally, you will need to import <code>app</code> and <code>db</code> from <code>app.py</code> into <code>main.py</code>.</li>
 </ul>
 </li>
-<li>
-<p>When the user visits the <code>/</code> and <code>/ratings</code> pages showing the unwatched and watched movies, she still sees <em>everybody's</em> movies. Fix it so that she only sees <em>her own</em> unwatched and watched movies. Also, you'll need to change the code to add a movie to the watchlist so that you assign an <code>owner</code> to the <code>movie</code> object.</p>
-</li>
+<li>When the user visits the <code>/</code> and <code>/ratings</code> pages showing the unwatched and watched movies, she still sees <em>everybody's</em> movies. Fix it so that she only sees <em>her own</em> unwatched and watched movies. Also, you'll need to change the code to add a movie to the watchlist so that you assign an <code>owner</code> to the <code>movie</code> object.</li>
 </ol>
                                     </section>
 
