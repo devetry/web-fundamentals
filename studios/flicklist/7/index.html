@@ -203,7 +203,9 @@
 <li>
 <p>A 'login wall' that monitors requests of unlogged-in users, and prompts them to create an account if they're not logged in.</p>
 </li>
-<li>Our <code>base</code> template will display flash messages, so that we can tell the user things like &quot;that is not a valid email address&quot;.</li>
+<li>
+<p>Our <code>base</code> template will display flash messages, so that we can tell the user things like &quot;that is not a valid email address&quot;.</p>
+</li>
 </ul>
 <h2 id="studio">Studio</h2>
 <p>Right now the only way to login is as a side-effect of creating a new account. It'd be neat if once users created accounts and logged out, they could log back in using their existing email and password, so we'll implement that in this studio. We'll also add validation and authentication for the login process.</p>
@@ -234,7 +236,9 @@ User.query.all()
 <li>
 <p>Create the <code>login.html</code> template, with form fields for email and password.</p>
 </li>
-<li>Test out your new route - one problem you will notice is that you get redirected to the <code>register.html</code> page. Change the login wall to allow this route through.</li>
+<li>
+<p>Test out your new route - one problem you will notice is that you get redirected to the <code>register.html</code> page. Change the login wall to allow this route through.</p>
+</li>
 </ol>
 <h2 id="retrospective">Retrospective</h2>
 <p>We've created users and managed the login and logout process. But the <code>User</code> model doesn't relate at all to our <code>Movie</code> model. In the next studio, we'll cross the streams and store movies on a per-user basis.</p>
