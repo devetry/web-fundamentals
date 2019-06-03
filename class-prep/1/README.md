@@ -14,8 +14,7 @@ Done | Task | Resource Type | Link | Instructions
 Done | Task | Resource Type | Link | Instructions
 |----|----|---------------|------|-------------|
 <input type="checkbox" v-model="checks.p1b" />|Watch | Video Lessons | [Intro to the Web][intro-to-web-dev] | Watch all videos in this playlist, and do the associated quizzes (pause after a quiz video to answer it before moving to the next video).
-<input type="checkbox" v-model="checks.p1c" />|Do | Interactive Course | [Codecademy: HTML Basics][html-basics] | This section covers the very basics. You will already be familiar with most of it from the above videos.
-<input type="checkbox" v-model="checks.p1d" />|o | Interactive Course | [Codecademy: Learn HTML][learn-html] | This section covers the very basics. You will already be familiar with most of it from the above videos. Complete only the free (non-Pro) sections.
+<input type="checkbox" v-model="checks.p1d" />|Do | Interactive Course | [Codecademy: Learn HTML][learn-html] | This section covers the very basics. You will already be familiar with most of it from the above videos. Complete only the free (non-Pro) sections.
 
 [intro-to-web-dev]: https://www.youtube.com/playlist?list=PLs5n5nYB22fKTnh0l3f1AWjEJTEUufmcd
 
