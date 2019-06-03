@@ -3,17 +3,6 @@ title: Class 2 Prep
 currentMenu: classes
 ---
 
-## HTML
-
-In the previous lesson, you learned a bit about HTML. Now get some more practice and reinforcement by going through these Codecademy tutorials:
-
-Done | Task | Resource Type | Link | Instructions
-|----|------|---------------|------|-------------|
-<input type="checkbox" v-model="checks.p2a" /> |Do | Interactive Course | [Codecademy: HTML Basics II][html-basics-2] | In this section you will learn some new HTML tags like lists.
-<input type="checkbox" v-model="checks.p2b" /> |Do | Interactive Course | [Codecademy: Social Networking Profile][social-networking-profile] | Here you will apply the concepts from the previous section into a small project.
-
----
-
 ## CSS
 
 CSS is a language for customizing the visual style of your HTML content. In this course we will not be focusing heavily on CSS, but it is important to at least know what it is and get a quick taste for how it works.
@@ -22,8 +11,6 @@ Done | Task | Resource Type | Link | Instructions
 |----|------|---------------|------|-------------|
 <input type="checkbox" v-model="checks.p2c" /> |Do | Interactive Course | [Codecademy: Learn CSS][learn-css] | Learn about using CSS to style HTML pages. Complete only the free (non-Pro) sections.
 <input type="checkbox" v-model="checks.p2d" /> |Do | Interactive Course | [Codecademy: Make a Website][make-a-website] | Use your HTML and CSS knowledge to bring it all together to build a website. Complete only the free (non-Pro) sections, and skip the final lesson on Bootstrap.
-<input type="checkbox" v-model="checks.p2e" /> |Do | Interactive Course | [Codecademy: CSS Selectors][css-selectors] | This section shows some additional ways to "select" certain sets of elements to receive the styles you specify.
-<input type="checkbox" v-model="checks.p2f" /> |Do | Interactive Course | [Codecademy: Sorting Your Friends][sorting-your-friends] | Here you will apply the concepts from the previous section into a small project.
 
 ---
 
