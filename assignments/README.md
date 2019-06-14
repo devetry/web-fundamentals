@@ -11,8 +11,7 @@ The process for submitting your work is always the same:
 
 1. Finish the assignment.
 2. `commit` and `push` your work to a repository on your GitHub profile.
-3. Email the GitHub URL for your project to `coding101@devetry.com`.
-4. Find a TF and demo your project for them.
+3. Post your submission in the `#assignments` channel.
 
 
 ---
