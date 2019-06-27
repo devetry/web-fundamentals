@@ -3,7 +3,7 @@ title: 'Studio: Databases Part 1'
 currentMenu: studios
 ---
 
-This studio has two parts, corresponding to what you'll learn in classes 7 and 8, respectively. In the first part of this studio, we'll create and manipulate tables, as well as explore the parallels between Python objects and database tables. In the second part of this studio, we'll make a real database locally and use it to perform SQL queries through *phpMyAdmin*.
+This studio has two parts, corresponding to what you'll learn in classes 7 and 8, respectively. In the first part of this studio, we'll create and manipulate tables, as well as explore the parallels between Python objects and database tables. In the second part of this studio, we'll make a real database locally and use it to perform SQL queries throught the command line and TablePlus.
 
 ## Walkthrough
 
@@ -13,9 +13,27 @@ Take the time now to think about what data types you might use for these columns
 
 As you were thinking about which data types to use for your table columns, you may have found yourself thinking, "if this were a property of a Python object, what data type would I use?" For instance, if I had a `movie` object in Python, and one of its properties was `title`, I would expect the data type for it to be a string, like "The Year of Living Dangerously". And I would expect the year it was released to be an integer, and the name of the director to be another string. This conceptual overlap between databases and Python objects is very useful, and we will explore it further in class 9 when you look at ORM (Object-relational mapping). Here's how such a table could be created:
 
+We'll need to first create our database by running the following command.
+```bash
+sqlite3 my_test.db
+.tables
+```
+
+You should now see a command prompt that looks something like this:
+```bash
+SQLite version 3.24.0 2018-06-04 14:10:15
+Enter ".help" for usage hints.
+sqlite>
+```
+
+Try typing `.help` to see the available information:
+
+After doing so, let's create our first `table`:
+
+
 ```sql
 CREATE TABLE movies (
-    movie_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    movie_id INTEGER PRIMARY KEY,
     title VARCHAR(120),
     year INTEGER,
     director VARCHAR(120)
@@ -26,7 +44,7 @@ Next, let's think about what kind of properties we'd expect a `director` object 
 
 ```sql
 CREATE TABLE directors (
-    director_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    director_id INTEGER PRIMARY KEY,
     first VARCHAR(120),
     last VARCHAR(120),
     country VARCHAR(120)
@@ -41,11 +59,16 @@ It may be useful to review [this article](http://www.databaseprimer.com/pages/re
 
 In order to reflect this relationship in the table definitions, let's modify the `director` column in `movies` to become `director_id` and therefore to be an `INTEGER` instead of a `VARCHAR` (as that is the type we used earlier when we thought the director column would hold the name of a director). We also will want to make the `director_id` column a foreign key, so that it links directly to the `director_id` column of the `directors` table. Go ahead and write the SQL to drop the `movies` table we had created, and then write the SQL to create a new table with these changes.
 
+Turn on Foreign Key Constraints:
+```sql
+sqlite> PRAGMA foreign_keys = ON;
+```
+
 ```sql
 DROP TABLE movies;
 
 CREATE TABLE movies (
-    movie_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    movie_id INTEGER PRIMARY KEY,
     title VARCHAR(120),
     year INTEGER,
     director_id INTEGER,
@@ -66,6 +89,14 @@ Still, we may want to know that information for a given movie, e.g., we may want
 For this studio, you'll practice writing the SQL queries to perform various data retrieval and manipulation tasks.
 
 ### Your Task:
+
+### Download the SQLite3 Demo Database Here:
+
+[SQLite Sample Database](http://www.sqlitetutorial.net/sqlite-sample-database/)
+
+Attempt `SQLite Select`, `SQLite Where`, `SQLite Like`, `SQLite Insert`, `SQLite Update`, and `SQLite Delete`.  Found on the `SQLITE TUTORIAL` sidebar here: [SQLite Tutorial](http://www.sqlitetutorial.net/)
+
+### Practice Writing Queries
 
 Even though our database does not have entries in it, we can imagine that it does, and query it accordingly! Referencing the table definitions above, write the SQL commands to carry out each of the queries described below. Write your answers in a text/code editor.
 
