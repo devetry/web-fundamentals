@@ -33,7 +33,7 @@ After doing so, let's create our first `table`:
 
 ```sql
 CREATE TABLE movies (
-    movie_id INTEGER PRIMARY KEY,
+    movie_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     title VARCHAR(120),
     year INTEGER,
     director VARCHAR(120)
@@ -44,7 +44,7 @@ Next, let's think about what kind of properties we'd expect a `director` object 
 
 ```sql
 CREATE TABLE directors (
-    director_id INTEGER PRIMARY KEY,
+    director_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     first VARCHAR(120),
     last VARCHAR(120),
     country VARCHAR(120)
@@ -68,7 +68,7 @@ sqlite> PRAGMA foreign_keys = ON;
 DROP TABLE movies;
 
 CREATE TABLE movies (
-    movie_id INTEGER PRIMARY KEY,
+    movie_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     title VARCHAR(120),
     year INTEGER,
     director_id INTEGER,
