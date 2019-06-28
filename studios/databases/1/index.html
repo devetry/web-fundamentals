@@ -196,14 +196,14 @@ sqlite&gt;</code></pre>
 <p>Try typing <code>.help</code> to see the available information:</p>
 <p>After doing so, let's create our first <code>table</code>:</p>
 <pre><code class="language-sql">CREATE TABLE movies (
-    movie_id INTEGER PRIMARY KEY,
+    movie_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     title VARCHAR(120),
     year INTEGER,
     director VARCHAR(120)
 );</code></pre>
 <p>Next, let's think about what kind of properties we'd expect a <code>director</code> object in Python to have. It would probably have a <code>first</code> name, a <code>last</code> name, and maybe the <code>country</code> where the director was born. Thinking about what kind of data types we'd expect those properties to be, let's go ahead and write the SQL to create a table, <code>directors</code>, with the corresponding columns and appropriate data types. Also, be sure to have an <code>director_id</code> column so that we have a valid primary key.</p>
 <pre><code class="language-sql">CREATE TABLE directors (
-    director_id INTEGER PRIMARY KEY,
+    director_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     first VARCHAR(120),
     last VARCHAR(120),
     country VARCHAR(120)
@@ -218,7 +218,7 @@ sqlite&gt;</code></pre>
 <pre><code class="language-sql">DROP TABLE movies;
 
 CREATE TABLE movies (
-    movie_id INTEGER PRIMARY KEY,
+    movie_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     title VARCHAR(120),
     year INTEGER,
     director_id INTEGER,
