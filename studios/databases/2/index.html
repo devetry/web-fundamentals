@@ -195,9 +195,12 @@ sqlite3 movie-buff.db</code></pre>
 <h3 id="import-tables-from">Import Tables From <code>.sql</code></h3>
 <p>Now that we have our database created, we can actually <code>seed</code> (populate) our database, using a <code>.sql</code> file!</p>
 <p>Now, download this SQL file: <a href="downloads/movie-buff.lite.sql">movie-buff.lite.sql</a>.</p>
-<p>Open up this file in vscode -- see? SQL is a language like python! (well, not EXACTLY like python, but you can save a file and run it against a database instead of doing everything mannually! neat!)</p>
-<p>To run this code in Sqlite3, run <code>psql -h localhost -U &lt;username you created&gt; -W -d &lt;database you created, probably "movie-buff"&gt; -f path/to/file.sql</code>.</p>
+<p>Open up this file in vscode -- see? SQL is a language like python! (well, not EXACTLY like python, but you can save a file and run it against a database instead of doing everything manually! neat!)</p>
+<p>To run this code in Sqlite3, run:</p>
+<pre><code class="language-bash">.read path/to/file.sql</code></pre>
 <h4 id="stop-here-and-make-sure-your-setup-looks-ok-play-around-a-bit-if-you-would-like-ask-any-questions">STOP HERE and make sure your setup looks ok. Play around a bit if you would like! Ask any questions.</h4>
+<p>After successfully running the file, your database should now have 4 tables, <code>directors</code>, <code>movies</code>, <code>viewers</code>, and <code>viewings</code>.</p>
+<p>To verify this try running <code>.tables</code>.  Or try opening your file using <strong>TablePlus</strong>.</p>
 <h2 id="studio">Studio</h2>
 <p>Sarah has a very eclectic taste in movies, but her friends admire it. Over the years, they've borrowed a lot of her DVDs, and she's set up a database to keep track of who has watched what so that she can make better recommendations for them based on what they've seen so far.</p>
 <p>There are four tables in the <code>movie-buff</code> database: <code>movies</code>, <code>directors</code>, <code>viewers</code>, and <code>viewings</code>.</p>
@@ -216,7 +219,7 @@ FROM viewers
 JOIN viewings
 ON viewers.viewer_id = viewings.viewer_id
 WHERE viewings.date_viewed &lt; '2010-01-01'</code></pre>
-<p>IF you see data, AWESOME! start helping our imaginary friend below. If you dont see data, <em>STOP HERE</em>. Get some help from a classmate or instructor.</p>
+<p>IF you see data, AWESOME! start helping our imaginary friend below. If you don't see data, <em>STOP HERE</em>. Get some help from a classmate or instructor.</p>
 <p>Here are some of the things Sarah needs your help with:</p>
 <ol>
 <li>
