@@ -34,11 +34,19 @@ Now that we have our database created, we can actually `seed` (populate) our dat
 
 Now, download this SQL file: [movie-buff.lite.sql](downloads/movie-buff.lite.sql).
 
-Open up this file in vscode -- see? SQL is a language like python! (well, not EXACTLY like python, but you can save a file and run it against a database instead of doing everything mannually! neat!)
+Open up this file in vscode -- see? SQL is a language like python! (well, not EXACTLY like python, but you can save a file and run it against a database instead of doing everything manually! neat!)
 
-To run this code in Sqlite3, run `psql -h localhost -U <username you created> -W -d <database you created, probably "movie-buff"> -f path/to/file.sql`.
+To run this code in Sqlite3, run:
 
+```bash
+.read path/to/file.sql
+```
 #### STOP HERE and make sure your setup looks ok. Play around a bit if you would like! Ask any questions.
+
+After successfully running the file, your database should now have 4 tables, `directors`, `movies`, `viewers`, and `viewings`.
+
+To verify this try running `.tables`.  Or try opening your file using **TablePlus**.
+
 
 ## Studio
 
@@ -77,7 +85,7 @@ WHERE viewings.date_viewed < '2010-01-01'
 
 
 
-IF you see data, AWESOME! start helping our imaginary friend below. If you dont see data, *STOP HERE*. Get some help from a classmate or instructor.
+IF you see data, AWESOME! start helping our imaginary friend below. If you don't see data, *STOP HERE*. Get some help from a classmate or instructor.
 
 Here are some of the things Sarah needs your help with:
 
