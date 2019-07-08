@@ -3,6 +3,10 @@ title: "Get It Done! Part 3: Using Persistent Classes in Flask"
 currentMenu: videos
 ---
 
+## Important Note:
+
+### This series of videos uses `MAMP`, `PHPMyAdmin`, and `MySQL`.  **WE ARE NOT USING THESE TOOLS.** Instead we are using `TablePlus` and `Sqlite3`.
+
 <div class="youtube-wrapper"><iframe width="776" height="437" src="https://www.youtube-nocookie.com/embed/fDFeQCE48dY?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 ## Notes
@@ -51,4 +55,4 @@ def delete_task():
 
 ## Code
 
-View the [final code](https://github.com/LaunchCodeEducation/get-it-done/tree/14292936bd94ac16825632ee3b14ed6fa6154e64) for this lesson.
+View the [final code](https://github.com/devetrycodeforward/get-it-done/tree/4ac5d350b7ec30c742b8a9270621f431851ccf6b) for this lesson.

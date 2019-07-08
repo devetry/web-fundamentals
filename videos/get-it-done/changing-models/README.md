@@ -3,6 +3,10 @@ title: "Get It Done! Part 4: Changing a Model Class"
 currentMenu: videos
 ---
 
+## Important Note:
+
+### This series of videos uses `MAMP`, `PHPMyAdmin`, and `MySQL`.  **WE ARE NOT USING THESE TOOLS.** Instead we are using `TablePlus` and `Sqlite3`.
+
 <div class="youtube-wrapper"><iframe width="776" height="437" src="https://www.youtube-nocookie.com/embed/UmCRcjKIqps?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 ## Notes
@@ -76,4 +80,4 @@ Create the HTML in the `todos.html` template to display the list of completed ta
 
 ## Code
 
-View the [final code](https://github.com/LaunchCodeEducation/get-it-done/tree/52ec146dc2f9943a011dd46d4a546b75703c226f) for this lesson.
+View the [final code](https://github.com/devetrycodeforward/get-it-done/tree/ae2143209b9d30afe54350c1e10711d037522c32) for this lesson.

@@ -5,7 +5,7 @@ currentMenu: classes
 
 ## Object-Relational Mapping
 
-In the two last lessons, we learned about how relational databases such as MySQL store data. In these next lessons, we learn how we can use **Object-Relational Mapping** tools to store Python objects in relational databases.
+In the two last lessons, we learned about how relational databases such as SQLite3 store data. In these next lessons, we learn how we can use **Object-Relational Mapping** tools to store Python objects in relational databases.
 
 Done |Task | Resource Type | Link | Instructions
 |----|-----|---------------|------|-------------|
