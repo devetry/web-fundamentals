@@ -181,34 +181,21 @@
 
                 <section id="content" class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
                                         <h1>Get It Done! Part 2: Database Configuration</h1>
-                    <div class="youtube-wrapper"><iframe width="776" height="437" src="https://www.youtube-nocookie.com/embed/-bvlj_3Im6s?rel=0" frameborder="0" allowfullscreen></iframe></div>
+                    <h2 id="important-note">Important Note:</h2>
+<h3 id="this-series-of-videos-uses">This series of videos uses <code>MAMP</code>, <code>PHPMyAdmin</code>, and <code>MySQL</code>.  <strong>WE ARE NOT USING THESE TOOLS.</strong> Instead we are using <code>TablePlus</code> and <code>Sqlite3</code>.</h3>
+<div class="youtube-wrapper"><iframe width="776" height="437" src="https://www.youtube-nocookie.com/embed/-bvlj_3Im6s?rel=0" frameborder="0" allowfullscreen></iframe></div>
 <h2 id="notes">Notes</h2>
-<p>Begin by starting MAMP, starting the servers, and going to phpMyAdmin.</p>
-<p>Now we'll create a new user and database for our <em>Get It Done!</em> application. A good design principle is that for each application you have one database, for each database, one user. This keeps privileges and permissions separated across applications. You can review the basic steps in written form <a href="../../../studios/databases/2/#database-setup">here</a>.</p>
 <p>If you don't already have <code>flask-env</code> activated, activate it now. Then run:</p>
-<pre><code class="language-nohighlight">conda install -c conda-forge flask-sqlalchemy</code></pre>
-<p>After this installation completes, run the following:</p>
-<aside class="aside-warning">
-<p>Windows Git Bash users will need to deactivate <code>flask-env</code> and close their terminal, then open a new Git Bash terminal, navigate to this directory, and activate <code>flask-env</code> again before proceeding to use the install command below.    </p>
-</aside>
-<pre><code class="language-nohighlight">conda install pymysql</code></pre>
-<aside class="aside-warning">
-<p>And again it is advisable for Windows Git Bash to close their terminal, then open a new Git Bash terminal, navigate to this directory and activate <code>flask-env</code> before continuing.  </p>
-</aside>
-<p>Now, amend your <code>main.py</code> by adding the following four lines:</p>
-<pre><code class="language-python">from flask_sqlalchemy import SQLAlchemy </code></pre>
-<pre><code class="language-python"># Note: the connection string after :// contains the following info:
-# user:password@server:portNumber/databaseName
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://get-it-done:beproductive@localhost:8889/get-it-done'</code></pre>
-<aside class="aside-pro-tip">
-<p>Two primary sources of bugs when running an application using a database are:</p>
-<ol>
-<li>The database is not running.</li>
-<li>The connection string is not correct.</li>
-</ol>
-<p>So if your application isn't working, be sure to check that you've started the MySQL server and that you have the correct information (especially port number, user and password) in the connection string!    </p>
-</aside>
+<pre><code class="language-bash">conda install -c conda-forge flask-sqlalchemy</code></pre>
+<p>If instead you are using <code>pipenv</code> you may run:</p>
+<pre><code class="language-bash">pipenv install flask-sqlalchemy</code></pre>
+<p>Or if you prefer installing the dependency globally:</p>
+<pre><code class="language-bash">pip install flask-sqlalchemy</code></pre>
+<p>After this installation completes, amend your <code>main.py</code> by adding the following six lines:</p>
+<pre><code class="language-python">import os
+from flask_sqlalchemy import SQLAlchemy </code></pre>
+<pre><code class="language-python">project_dir = os.path.dirname(os.path.abspath(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "get-it-done.db"))</code></pre>
 <pre><code class="language-python">app.config['SQLALCHEMY_ECHO'] = True</code></pre>
 <pre><code class="language-python">db = SQLAlchemy(app)</code></pre>
 <p>Next we'll continue modifying <code>main.py</code> and create a persistent class for database data: </p>
@@ -222,7 +209,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://get-it-done:beproductiv
 <p>Be sure to shield <code>app.run</code> by enclosing it in an <code>if</code> condition:</p>
 <pre><code class="language-python">if __name__ == '__main__':
     app.run()</code></pre>
-<p>Back in the terminal, start a python shell by running the command <code>python</code>. Then import <code>db</code> and create the tables:</p>
+<p>Back in the terminal, start a python shell by running the command <code>python</code> (or <code>python3</code> depending on your installation). Then import <code>db</code> and create the tables:</p>
 <pre><code class="language-nohighlight">&gt; from main import db,Task
 &gt; db.create_all()</code></pre>
 <p>Now run the following commands one at a time to add data to the database:</p>
@@ -235,7 +222,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://get-it-done:beproductiv
 <pre><code class="language-nohighlight">&gt;&gt;&gt; tasks = Task.query.all()
 &gt;&gt;&gt; tasks[0].name</code></pre>
 <h2 id="code">Code</h2>
-<p>View the <a href="https://github.com/LaunchCodeEducation/get-it-done/tree/7e8a99b421e8c1564c65de1ef30865c64e708e6d">final code</a> for this lesson.</p>
+<p>View the <a href="https://github.com/devetrycodeforward/get-it-done/tree/9b5483968e38d24b16a281e7a82a176446454ea0">final code</a> for this lesson.</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="http://www.sqlalchemy.org/">SQLAlchemy</a></li>
