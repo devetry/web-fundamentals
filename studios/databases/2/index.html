@@ -182,31 +182,27 @@
                 <section id="content" class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
                                         <h1>Studio: Databases Part 2</h1>
                     <h2 id="walkthrough">Walkthrough</h2>
-<p>In this studio we'll be using the custom 'postgres-kernel' we set up for jupyter last week instead of myadmin.</p>
-<h4 id="a-note-about-mamp">A note about MAMP</h4>
-<p>If you prefer, you can use the myadmin instead -- these instructions were originally written for the myadmin which comes with MAMP - if you found MAMP easy to setup you can use those instructions, but its a good idea to note the literal SQL commands that myadmin would be running for you behind the scenes. In production, some places use a GUI like myadmin and others use raw sql, so experiment with both to learn what you like. </p>
-<p>For the initial setup, first step is to create a new user account and associated database for our movie-buff project. Then we'll import a <code>.sql</code> file and get the tables we'll use from that. Then we'll perform some queries on that data.</p>
+<h4 id="a-note-about-tableplus">A note about TablePlus</h4>
+<p>It's a tool to help you interact with your SQL Database that is a little more user-friendly than your command line.  Don't forget to utilize it! </p>
 <h3 id="database-setup">Database Setup</h3>
-<p>Let's start by setting up a new database for this project with a new, associated user account.</p>
-<p><a href="https://www.postgresql.org/docs/10/static/sql-createuser.html">Here is the postgres documentation on creating a user</a></p>
-<p>Examples are better than documentation though, <a href="https://www.dropbox.com/s/a6mqk5z2j3pt3pz/Brian%27s%20movie%20db.ipynb?dl=0">here is a jupyter notebook containing examples!</a></p>
-<p>A good pattern to follow is that you should have a different user for each application, and the username should match the name of your application. For local development, it's acceptable to use a simple password. Just be sure that you don't use the same password on a production database if you deploy your application!</p>
+<p>Let's start by creating a new database called <code>movie-buff.db</code>.  For this example, I'll be placing the file on my desktop.</p>
+<pre><code class="language-bash">cd Desktop
+sqlite3 movie-buff.db</code></pre>
+<p>After running that command, you should see the following output:</p>
+<pre><code class="language-bash">sqlite&gt;</code></pre>
+<p>Turn on <code>Foreign Key Constraints</code> for your new Database:</p>
+<pre><code class="language-sql">PRAGMA foreign_keys = ON;</code></pre>
 <h3 id="import-tables-from">Import Tables From <code>.sql</code></h3>
-<p>Using syntax similar to the examples, create a database called 'movie-buff'.</p>
-<p>Now, download this SQL file: <a href="https://trello-attachments.s3.amazonaws.com/58d428743111af1d0a20cf28/5b2c4317ae805dcec622b42b/f6db88ddea8d2a9efa34ae2fcdf6200b/movie-buff.postgres.sql">movie-buff.sql</a>.</p>
+<p>Now that we have our database created, we can actually <code>seed</code> (populate) our database, using a <code>.sql</code> file!</p>
+<p>Now, download this SQL file: <a href="downloads/movie-buff.lite.sql">movie-buff.lite.sql</a>.</p>
 <p>Open up this file in vscode -- see? SQL is a language like python! (well, not EXACTLY like python, but you can save a file and run it against a database instead of doing everything mannually! neat!)</p>
-<p>To run this code in your instance of postgres, run <code>psql -h localhost -U &lt;username you created&gt; -W -d &lt;database you created, probably "movie-buff"&gt; -f path/to/file.sql</code>.</p>
+<p>To run this code in Sqlite3, run <code>psql -h localhost -U &lt;username you created&gt; -W -d &lt;database you created, probably "movie-buff"&gt; -f path/to/file.sql</code>.</p>
 <h4 id="stop-here-and-make-sure-your-setup-looks-ok-play-around-a-bit-if-you-would-like-ask-any-questions">STOP HERE and make sure your setup looks ok. Play around a bit if you would like! Ask any questions.</h4>
 <h2 id="studio">Studio</h2>
 <p>Sarah has a very eclectic taste in movies, but her friends admire it. Over the years, they've borrowed a lot of her DVDs, and she's set up a database to keep track of who has watched what so that she can make better recommendations for them based on what they've seen so far.</p>
 <p>There are four tables in the <code>movie-buff</code> database: <code>movies</code>, <code>directors</code>, <code>viewers</code>, and <code>viewings</code>.</p>
 <p>There is one table Sarah made that might not seem intuitive to have created - the 'viewings' table. One way to check out whats going on with this table is to run </p>
-<pre><code class="language-sql">SELECT
- COLUMN_NAME
-FROM
- information_schema.COLUMNS
-WHERE
- TABLE_NAME = 'viewings';</code></pre>
+<pre><code class="language-sql">.schema viewings</code></pre>
 <p>The purpose of this table is to keep track of &quot;who watched what when&quot;. The <em>who</em> is the <code>viewer_id</code>, which is a foreign key that references the <code>viewer_id</code> in the <code>viewers</code> table. The <em>what</em> is the <code>movie_id</code> which is a foreign key that references the <code>movie_id</code> in the <code>movies</code> table. And the <em>when</em> is of course the <code>date_viewed</code> column with a <code>date</code> data type. Each viewing of a movie by one of Sarah's friends is captured as a unique record.</p>
 <p>This kind of table is very common in relational database design. It has many virtues including that it clearly links the <code>movies</code> and <code>viewers</code> table together and it makes the database more maintainable. For instance, you might have chosen to make a <code>viewing</code> table where you actually list the movie title and the name of the viewer. But if you did that then anytime some of that information changes - say a friend gets married and changes last names - you would now have to update the name of the viewer in <em>both</em> the <code>viewers</code> table <em>and</em> the <code>viewings</code> table. With this design, any updates you make to either the <code>movies</code> or <code>viewers</code> table will be reflected automatically in the results from queries on the <code>viewings</code> table.</p>
 <p>Review this lesson from <a href="https://www.khanacademy.org/computing/computer-programming/sql/relational-queries-in-sql/a/splitting-data-into-related-tables">Khan Academy</a> for a more in-depth explanation of why we break tables up this way.</p>
