@@ -183,6 +183,8 @@
                                         <h1>Get It Done! Part 2: Database Configuration</h1>
                     <h2 id="important-note">Important Note:</h2>
 <h3 id="this-series-of-videos-uses">This series of videos uses <code>MAMP</code>, <code>PHPMyAdmin</code>, and <code>MySQL</code>.  <strong>WE ARE NOT USING THESE TOOLS.</strong> Instead we are using <code>TablePlus</code> and <code>Sqlite3</code>.</h3>
+<h3><span style="color:red">The code examples below ARE <em>slightly</em> different from the code in the video</span></h3>
+<h3><span style="color:red">Each difference is marked with a <code>DIFFERENT CODE ALERT</code> marker</span></h3>
 <div class="youtube-wrapper"><iframe width="776" height="437" src="https://www.youtube-nocookie.com/embed/-bvlj_3Im6s?rel=0" frameborder="0" allowfullscreen></iframe></div>
 <h2 id="notes">Notes</h2>
 <p>If you don't already have <code>flask-env</code> activated, activate it now. Then run:</p>
@@ -192,8 +194,10 @@
 <p>Or if you prefer installing the dependency globally:</p>
 <pre><code class="language-bash">pip install flask-sqlalchemy</code></pre>
 <p>After this installation completes, amend your <code>main.py</code> by adding the following six lines:</p>
+<h4><span style="color:red"><code>DIFFERENT CODE ALERT</code></span></h4>
 <pre><code class="language-python">import os
 from flask_sqlalchemy import SQLAlchemy </code></pre>
+<h4><span style="color:red"><code>DIFFERENT CODE ALERT</code></span></h4>
 <pre><code class="language-python">project_dir = os.path.dirname(os.path.abspath(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "get-it-done.db"))</code></pre>
 <pre><code class="language-python">app.config['SQLALCHEMY_ECHO'] = True</code></pre>
