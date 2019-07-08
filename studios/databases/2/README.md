@@ -5,32 +5,38 @@ currentMenu: studios
 
 ## Walkthrough
 
-In this studio we'll be using the custom 'postgres-kernel' we set up for jupyter last week instead of myadmin.
-
-#### A note about MAMP
-If you prefer, you can use the myadmin instead -- these instructions were originally written for the myadmin which comes with MAMP - if you found MAMP easy to setup you can use those instructions, but its a good idea to note the literal SQL commands that myadmin would be running for you behind the scenes. In production, some places use a GUI like myadmin and others use raw sql, so experiment with both to learn what you like. 
-
-For the initial setup, first step is to create a new user account and associated database for our movie-buff project. Then we'll import a `.sql` file and get the tables we'll use from that. Then we'll perform some queries on that data.
+#### A note about TablePlus
+It's a tool to help you interact with your SQL Database that is a little more user-friendly than your command line.  Don't forget to utilize it! 
 
 ### Database Setup
 
-Let's start by setting up a new database for this project with a new, associated user account.
+Let's start by creating a new database called `movie-buff.db`.  For this example, I'll be placing the file on my desktop.
 
-[Here is the postgres documentation on creating a user](https://www.postgresql.org/docs/10/static/sql-createuser.html)
+```bash
+cd Desktop
+sqlite3 movie-buff.db
+```
 
-Examples are better than documentation though, [here is a jupyter notebook containing examples!](https://www.dropbox.com/s/a6mqk5z2j3pt3pz/Brian%27s%20movie%20db.ipynb?dl=0)
+After running that command, you should see the following output:
 
-A good pattern to follow is that you should have a different user for each application, and the username should match the name of your application. For local development, it's acceptable to use a simple password. Just be sure that you don't use the same password on a production database if you deploy your application!
+```bash
+sqlite>
+```
+
+Turn on `Foreign Key Constraints` for your new Database:
+```sql
+PRAGMA foreign_keys = ON;
+```
 
 ### Import Tables From `.sql`
 
-Using syntax similar to the examples, create a database called 'movie-buff'.
+Now that we have our database created, we can actually `seed` (populate) our database, using a `.sql` file!
 
-Now, download this SQL file: [movie-buff.sql](https://trello-attachments.s3.amazonaws.com/58d428743111af1d0a20cf28/5b2c4317ae805dcec622b42b/f6db88ddea8d2a9efa34ae2fcdf6200b/movie-buff.postgres.sql).
+Now, download this SQL file: [movie-buff.lite.sql](downloads/movie-buff.lite.sql).
 
 Open up this file in vscode -- see? SQL is a language like python! (well, not EXACTLY like python, but you can save a file and run it against a database instead of doing everything mannually! neat!)
 
-To run this code in your instance of postgres, run `psql -h localhost -U <username you created> -W -d <database you created, probably "movie-buff"> -f path/to/file.sql`.
+To run this code in Sqlite3, run `psql -h localhost -U <username you created> -W -d <database you created, probably "movie-buff"> -f path/to/file.sql`.
 
 #### STOP HERE and make sure your setup looks ok. Play around a bit if you would like! Ask any questions.
 
@@ -43,12 +49,7 @@ There are four tables in the `movie-buff` database: `movies`, `directors`, `view
 There is one table Sarah made that might not seem intuitive to have created - the 'viewings' table. One way to check out whats going on with this table is to run 
 
 ```sql
-SELECT
- COLUMN_NAME
-FROM
- information_schema.COLUMNS
-WHERE
- TABLE_NAME = 'viewings';
+.schema viewings
 ``` 
 
 The purpose of this table is to keep track of "who watched what when". The *who* is the `viewer_id`, which is a foreign key that references the `viewer_id` in the `viewers` table. The *what* is the `movie_id` which is a foreign key that references the `movie_id` in the `movies` table. And the *when* is of course the `date_viewed` column with a `date` data type. Each viewing of a movie by one of Sarah's friends is captured as a unique record.
