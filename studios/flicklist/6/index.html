@@ -188,7 +188,20 @@
 <p>The most powerful line in this whole batch of changes is this:</p>
 <pre><code class="language-python">def get_current_watchlist():
     return [movie.name for movie in Movie.query.all()]</code></pre>
-<p>Your instructor has already created a user and database for <code>flicklist</code> sqlite3 (you will do the same in the Studio portion below), so you can run the code below in a Python shell to create the <code>movie</code> table. Now that we've added <code>if __name__ == "__main__":</code> to prevent <code>app.run()</code> from running when we load <code>main.py</code> as a module, we can now safely import <code>db</code> and <code>Movie</code> from <code>main.py</code>:</p>
+<p>Your instructor has already created a user and database for <code>flicklist</code> sqlite3 (you will do the same in the Studio portion below), so you can run the code below in a Python shell to create the <code>movie</code> table. </p>
+<h3 id="update-the-code-to-use-sqlite3-instead-of-mysql">Update the Code to use SQLite3 Instead of MySQL</h3>
+<ul>
+<li>Open up the flicklist project in VS Code</li>
+<li>Open the <code>main.py</code> file</li>
+<li>Below the line <code>import cgi</code> at the top of the file, <strong>ADD</strong> the following line:
+<pre><code class="language-python">import os</code></pre></li>
+<li><strong>REPLACE</strong> this line:
+<pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@localhost:8889/flicklist'</code></pre></li>
+<li>With these two lines:
+<pre><code class="language-python">project_dir = os.path.dirname(os.path.abspath(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))</code></pre></li>
+</ul>
+<p>Now that we've added <code>if __name__ == "__main__":</code> to prevent <code>app.run()</code> from running when we load <code>main.py</code> as a module, we can now safely import <code>db</code> and <code>Movie</code> from <code>main.py</code>:</p>
 <pre><code class="language-bash">(flask-env) $ python
 &gt;&gt;&gt; from main import db, Movie
 /home/dm/miniconda3/envs/flicklist/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py:839: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
@@ -234,13 +247,13 @@
 <li>Run the flicklist application</li>
 <li>Modify flicklist to store movie ratings</li>
 </ol>
-<h3 id="update-the-code-to-use-sqlite3-instead-of-mysql">Update the Code to use SQLite3 Instead of MySQL</h3>
+<h3 id="update-the-code-to-use-sqlite3-instead-of-mysql-1">Update the Code to use SQLite3 Instead of MySQL</h3>
 <ul>
 <li>Open up the flicklist project in VS Code</li>
 <li>Open the <code>main.py</code> file</li>
-<li>Below the line <code>import cgi</code> at the top of the file, add the following line:
+<li>Below the line <code>import cgi</code> at the top of the file, <strong>ADD</strong> the following line:
 <pre><code class="language-python">import os</code></pre></li>
-<li>REPLACE this line:
+<li><strong>REPLACE</strong> this line:
 <pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@localhost:8889/flicklist'</code></pre></li>
 <li>With these two lines:
 <pre><code class="language-python">project_dir = os.path.dirname(os.path.abspath(__file__))
