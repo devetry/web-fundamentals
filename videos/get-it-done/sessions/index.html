@@ -181,7 +181,9 @@
 
                 <section id="content" class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
                                         <h1>Get It Done! Part 7: Managing Login Using the Session</h1>
-                    <div class="youtube-wrapper"><iframe width="776" height="437" src="https://www.youtube-nocookie.com/embed/QjJ_pTZoWw0?rel=0" frameborder="0" allowfullscreen></iframe></div>
+                    <h2 id="important-note">Important Note:</h2>
+<h3 id="this-series-of-videos-uses">This series of videos uses <code>MAMP</code>, <code>PHPMyAdmin</code>, and <code>MySQL</code>.  <strong>WE ARE NOT USING THESE TOOLS.</strong> Instead we are using <code>TablePlus</code> and <code>Sqlite3</code>.</h3>
+<div class="youtube-wrapper"><iframe width="776" height="437" src="https://www.youtube-nocookie.com/embed/QjJ_pTZoWw0?rel=0" frameborder="0" allowfullscreen></iframe></div>
 <h2 id="notes">Notes</h2>
 <p>In this video lesson we learn how to enable our application to &quot;remember&quot; users via Flask's <code>session</code> object. A session is an object (specifically, a dictionary) that you can use to store data that is associated with a specific user so that it is available for use across multiple requests. We'll also learn how to &quot;forget&quot; a user using <code>session</code> and a logout route. </p>
 <p>Additionally, we'll learn how to create special functions that are not route-specific using the decorator <code>@app.before_request</code>. This allows us to do checks before handling incoming requests. </p>
@@ -220,7 +222,7 @@ def require_login():
 </li>
 </ul>
 <h2 id="code">Code</h2>
-<p>View the <a href="https://github.com/LaunchCodeEducation/get-it-done/tree/5e700d1c821c946f5d630cc5795a6c6354280824">final code</a> for this lesson.</p>
+<p>View the <a href="https://github.com/devetrycodeforward/get-it-done/tree/6b54b2bd08ba9ad65537003af7d8f03d3fd3559e">final code</a> for this lesson.</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="http://flask.pocoo.org/docs/0.12/quickstart/#sessions">Sessions in Flask</a></li>

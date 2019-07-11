@@ -188,8 +188,8 @@
 <p>The most powerful line in this whole batch of changes is this:</p>
 <pre><code class="language-python">def get_current_watchlist():
     return [movie.name for movie in Movie.query.all()]</code></pre>
-<p>Your instructor has already created a user and database for <code>flicklist</code> in their <em>phpMyAdmin</em> (you will do the same in the Studio portion below), so they can run the code below in a Python shell to create the <code>movie</code> table. Now that we've added <code>if __name__ == "__main__":</code> to prevent <code>app.run()</code> from running when we load <code>main.py</code> as a module, we can now safely import <code>db</code> and <code>Movie</code> from <code>main.py</code>:</p>
-<pre><code class="language-nohighlight">(flask-env) $ python
+<p>Your instructor has already created a user and database for <code>flicklist</code> sqlite3 (you will do the same in the Studio portion below), so you can run the code below in a Python shell to create the <code>movie</code> table. Now that we've added <code>if __name__ == "__main__":</code> to prevent <code>app.run()</code> from running when we load <code>main.py</code> as a module, we can now safely import <code>db</code> and <code>Movie</code> from <code>main.py</code>:</p>
+<pre><code class="language-bash">(flask-env) $ python
 &gt;&gt;&gt; from main import db, Movie
 /home/dm/miniconda3/envs/flicklist/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py:839: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
 &gt;&gt;&gt; db.create_all()
@@ -226,24 +226,27 @@
 <p>Now that we have some database functionality wired into our application, let's continue to convert our app to use the database. Our next task is to implement persistent ratings, so a user can rate a movie and the information is stored in the database for later.</p>
 <h3 id="checking-out-the-studio-code">Checking out the Studio code</h3>
 <p>Follow the <a href="../getting-the-code/">instructions for getting the code</a> in order to get the starter code for <code>studio6</code>.</p>
-<p>You should have already installed MAMP locally but if you need a refresher it is in <a href="../../../class-prep/8">Class 8 Prep Work</a>.</p>
 <h3 id="your-tasks">Your Tasks</h3>
 <p>Here's an outline of the steps we'll take. We provide additional details below.</p>
 <ol>
-<li>Create MySQL user and database</li>
+<li>Update the Code to use SQLite3 Instead of MySQL</li>
 <li>Initialize your database</li>
 <li>Run the flicklist application</li>
 <li>Modify flicklist to store movie ratings</li>
 </ol>
-<h3 id="create-mysql-user-and-database">Create MySQL User and Database</h3>
-<p>Now we will need to create a database locally (on your computer). We will use the same names as we did in the walkthrough.</p>
-<p>Make sure your servers are running with MAMP. Go to <em>phpMyAdmin</em> in your browser and create a user named <em>flicklist</em> with the password <em>MyNewPass</em>. Check the box that says <em>Create database with same name and grant all privileges</em> then press the <em>Go</em> button in the bottom right-hand corner.</p>
-<p><img src="phpMyAdminCreateUserAndDatabase.png" alt="Create User And Database in phpMyAdin" /></p>
+<h3 id="update-the-code-to-use-sqlite3-instead-of-mysql">Update the Code to use SQLite3 Instead of MySQL</h3>
+<ul>
+<li>Open up the flicklist project in VS Code</li>
+<li>Open the <code>main.py</code> file</li>
+<li>Below the line <code>import cgi</code> at the top of the file, add the following line:
+<pre><code class="language-python">import os</code></pre></li>
+<li>REPLACE this line:
+<pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@localhost:8889/flicklist'</code></pre></li>
+<li>With these two lines:
+<pre><code class="language-python">project_dir = os.path.dirname(os.path.abspath(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))</code></pre></li>
+</ul>
 <h3 id="initialize-your-database">Initialize Your Database</h3>
-<p>Make sure your flask environment is activated. <strong>For this and future Studios</strong> we'll use the <code>flask-env</code> virtual environment that was created while you coded along with the video lessons. Since you already installed the necessary conda packages in the <a href="../../../videos/get-it-done/db-configuration">Database Configuration</a> lesson, your <code>flask-env</code> is ready to use SQLAlchemy.</p>
-<aside class="aside-warning">
-<p>If you did not install <code>flask-sqlalchemy</code> and <code>pymysql</code> into your virtual environment, stop and do so now using the instructions linked above.</p>
-</aside>
 <p>Reenact the python shell session from the walkthrough. Here it is again:</p>
 <pre><code class="language-nohighlight">(flask-env) $ python
 &gt;&gt;&gt; from main import db, Movie
