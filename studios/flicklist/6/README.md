@@ -18,7 +18,27 @@ def get_current_watchlist():
     return [movie.name for movie in Movie.query.all()]
 ```
 
-Your instructor has already created a user and database for `flicklist` sqlite3 (you will do the same in the Studio portion below), so you can run the code below in a Python shell to create the `movie` table. Now that we've added `if __name__ == "__main__":` to prevent `app.run()` from running when we load `main.py` as a module, we can now safely import `db` and `Movie` from `main.py`:
+Your instructor has already created a user and database for `flicklist` sqlite3 (you will do the same in the Studio portion below), so you can run the code below in a Python shell to create the `movie` table. 
+
+### Update the Code to use SQLite3 Instead of MySQL
+
+- Open up the flicklist project in VS Code
+- Open the `main.py` file
+- Below the line `import cgi` at the top of the file, **ADD** the following line:
+```python
+import os
+```
+- **REPLACE** this line:
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@localhost:8889/flicklist'
+```
+- With these two lines:
+```python
+project_dir = os.path.dirname(os.path.abspath(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))
+```
+
+Now that we've added `if __name__ == "__main__":` to prevent `app.run()` from running when we load `main.py` as a module, we can now safely import `db` and `Movie` from `main.py`:
 
 ```bash
 (flask-env) $ python
@@ -93,11 +113,11 @@ Here's an outline of the steps we'll take. We provide additional details below.
 
 - Open up the flicklist project in VS Code
 - Open the `main.py` file
-- Below the line `import cgi` at the top of the file, add the following line:
+- Below the line `import cgi` at the top of the file, **ADD** the following line:
 ```python
 import os
 ```
-- REPLACE this line:
+- **REPLACE** this line:
 ```python
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@localhost:8889/flicklist'
 ```
