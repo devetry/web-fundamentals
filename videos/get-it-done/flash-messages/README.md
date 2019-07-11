@@ -3,6 +3,10 @@ title: "Get It Done! Part 8: Flash Messages"
 currentMenu: videos
 ---
 
+## Important Note:
+
+### This series of videos uses `MAMP`, `PHPMyAdmin`, and `MySQL`.  **WE ARE NOT USING THESE TOOLS.** Instead we are using `TablePlus` and `Sqlite3`.
+
 <div class="youtube-wrapper"><iframe width="776" height="437" src="https://www.youtube-nocookie.com/embed/51SAZysvff4?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 ## Notes
@@ -40,7 +44,7 @@ In this video lesson we learn to use flash messages to flexibly display messages
 
 ## Code
 
-View the [final code](https://github.com/LaunchCodeEducation/get-it-done/tree/bb96f8ea76df9e57c92574abc7286243693675b8) for this lesson.
+View the [final code](https://github.com/devetrycodeforward/get-it-done/tree/6b54b2bd08ba9ad65537003af7d8f03d3fd3559e) for this lesson.
 
 ## References
 

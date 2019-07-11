@@ -3,6 +3,10 @@ title: "Get It Done! Part 6: Login and Register Handlers"
 currentMenu: videos
 ---
 
+## Important Note:
+
+### This series of videos uses `MAMP`, `PHPMyAdmin`, and `MySQL`.  **WE ARE NOT USING THESE TOOLS.** Instead we are using `TablePlus` and `Sqlite3`.
+
 <div class="youtube-wrapper"><iframe width="776" height="437" src="https://www.youtube-nocookie.com/embed/VXGBQxRqUBk?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 ## Notes 
@@ -11,4 +15,4 @@ In this video lesson we'll expand the functionality of the `register` and `login
 
 ## Code
 
-View the [final code](https://github.com/LaunchCodeEducation/get-it-done/tree/7f629dc5ba3038869da6e015601cbeb6568138e7) for this lesson.
+View the [final code](https://github.com/devetrycodeforward/get-it-done/tree/fcaf6f9204b833b107f5dd80de7eef3322e89915) for this lesson.

@@ -3,6 +3,10 @@ title: "Get It Done! Part 9: The User-Task Relationship"
 currentMenu: videos
 ---
 
+## Important Note:
+
+### This series of videos uses `MAMP`, `PHPMyAdmin`, and `MySQL`.  **WE ARE NOT USING THESE TOOLS.** Instead we are using `TablePlus` and `Sqlite3`.
+
 <div class="youtube-wrapper"><iframe width="776" height="437" src="https://www.youtube-nocookie.com/embed/rTUnjM7HaVg?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 ## Notes
@@ -57,7 +61,7 @@ Congratulations! You've learned the basics of creating web apps! What you've lea
 
 ## Code
 
-View the [final code](https://github.com/LaunchCodeEducation/get-it-done/tree/d979a9991347431023d41abdd93891aedafc1f93) for this lesson.
+View the [final code](https://github.com/devetrycodeforward/get-it-done/tree/6b54b2bd08ba9ad65537003af7d8f03d3fd3559e) for this lesson.
 
 ## References
 

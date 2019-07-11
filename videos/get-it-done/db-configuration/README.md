@@ -7,6 +7,9 @@ currentMenu: videos
 
 ### This series of videos uses `MAMP`, `PHPMyAdmin`, and `MySQL`.  **WE ARE NOT USING THESE TOOLS.** Instead we are using `TablePlus` and `Sqlite3`.
 
+<span style="color:red">The code examples below ARE *slightly* different from the code in the video</span>
+<span style="color:red">Each difference is marked with a `DIFFERENT CODE ALERT` marker</span>
+
 <div class="youtube-wrapper"><iframe width="776" height="437" src="https://www.youtube-nocookie.com/embed/-bvlj_3Im6s?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 ## Notes
@@ -31,11 +34,13 @@ pip install flask-sqlalchemy
 
 After this installation completes, amend your `main.py` by adding the following six lines:
 
+#### <span style="color:red">`DIFFERENT CODE ALERT`</span>
 ```python
 import os
 from flask_sqlalchemy import SQLAlchemy 
 ```
 
+#### <span style="color:red">`DIFFERENT CODE ALERT`</span>
 ```python
 project_dir = os.path.dirname(os.path.abspath(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "get-it-done.db"))

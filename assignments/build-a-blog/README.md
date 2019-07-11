@@ -19,7 +19,7 @@ We'll build this app incrementally and refactor as needed along the way. The gen
 
 ## Project Setup
 
-Create a new directory called `build-a-blog`, and then set up a local Git repository and a remote repository on GitHub. See the [Web Caesar setup instructions](../web-caesar/#git-repository-setup) if you need to review that process. Then set up a user and database in *phpMyAdmin* for this project. We recommend you use the name `build-a-blog`, but the password is up to you. Just remember that you will need to put all of that info into your database connection string. For refreshers on these parts of the process, re-visit [FlickList 6](../../studios/flicklist/6/#create-mysql-user-and-database) and [Database Configuration](../../videos/get-it-done/db-configuration). You'll also want to activate your `flask-env` virtual environment.
+Create a new directory called `build-a-blog`, and then set up a local Git repository and a remote repository on GitHub. See the [Web Caesar setup instructions](../web-caesar/#git-repository-setup) if you need to review that process. We recommend you use the name `build-a-blog`, but the password is up to you. Just remember that you will need to put all of that info into your database connection string. For refreshers on these parts of the process, re-visit [FlickList 6](../../studios/flicklist/6/#create-mysql-user-and-database) and [Database Configuration](../../videos/get-it-done/db-configuration). You'll also want to activate your `flask-env` virtual environment.
 
 ## List and Create Blog Posts
 

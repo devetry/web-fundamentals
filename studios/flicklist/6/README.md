@@ -18,9 +18,9 @@ def get_current_watchlist():
     return [movie.name for movie in Movie.query.all()]
 ```
 
-Your instructor has already created a user and database for `flicklist` in their *phpMyAdmin* (you will do the same in the Studio portion below), so they can run the code below in a Python shell to create the `movie` table. Now that we've added `if __name__ == "__main__":` to prevent `app.run()` from running when we load `main.py` as a module, we can now safely import `db` and `Movie` from `main.py`:
+Your instructor has already created a user and database for `flicklist` sqlite3 (you will do the same in the Studio portion below), so you can run the code below in a Python shell to create the `movie` table. Now that we've added `if __name__ == "__main__":` to prevent `app.run()` from running when we load `main.py` as a module, we can now safely import `db` and `Movie` from `main.py`:
 
-```nohighlight
+```bash
 (flask-env) $ python
 >>> from main import db, Movie
 /home/dm/miniconda3/envs/flicklist/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py:839: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
@@ -80,32 +80,35 @@ Now that we have some database functionality wired into our application, let's c
 
 Follow the [instructions for getting the code][get-the-code] in order to get the starter code for `studio6`.
 
-You should have already installed MAMP locally but if you need a refresher it is in [Class 8 Prep Work](../../../class-prep/8).
-
 ### Your Tasks
 
 Here's an outline of the steps we'll take. We provide additional details below.
 
-1. Create MySQL user and database
+1. Update the Code to use SQLite3 Instead of MySQL
 2. Initialize your database
 3. Run the flicklist application
 4. Modify flicklist to store movie ratings
 
-### Create MySQL User and Database
+### Update the Code to use SQLite3 Instead of MySQL
 
-Now we will need to create a database locally (on your computer). We will use the same names as we did in the walkthrough.
+- Open up the flicklist project in VS Code
+- Open the `main.py` file
+- Below the line `import cgi` at the top of the file, add the following line:
+```python
+import os
+```
+- REPLACE this line:
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@localhost:8889/flicklist'
+```
+- With these two lines:
+```python
+project_dir = os.path.dirname(os.path.abspath(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))
+```
 
-Make sure your servers are running with MAMP. Go to *phpMyAdmin* in your browser and create a user named *flicklist* with the password *MyNewPass*. Check the box that says *Create database with same name and grant all privileges* then press the *Go* button in the bottom right-hand corner.
-
-![Create User And Database in phpMyAdin](phpMyAdminCreateUserAndDatabase.png)
 
 ### Initialize Your Database
-
-Make sure your flask environment is activated. **For this and future Studios** we'll use the `flask-env` virtual environment that was created while you coded along with the video lessons. Since you already installed the necessary conda packages in the [Database Configuration](../../../videos/get-it-done/db-configuration) lesson, your `flask-env` is ready to use SQLAlchemy.
-
-<aside class="aside-warning" markdown="1">
-If you did not install `flask-sqlalchemy` and `pymysql` into your virtual environment, stop and do so now using the instructions linked above.
-</aside>
 
 Reenact the python shell session from the walkthrough. Here it is again:
 
@@ -143,14 +146,5 @@ In your browser, add one movie then cross it off.
 
 If you made it this far, you've completed a challenging studio. Congratulations!  And if you don't get it right away, don't give up. Keep on trying: be *persistent*!
 
-
-<aside class="aside-note" markdown="1">
-If you want to test your queries in the MySQL console, you can do so in the phpMyAdmin interface. Go to the left tab and click on the database name *flicklist* then on the second-to-top row tab click *SQL*.
-<br/>
-For those of you accustomed to accessing this via the command line, you will need to specify which mysql to use with a command like:
-```nohighlight
-/Applications/MAMP/Library/bin/mysql -uflicklist -p
-```
-</aside>
 
 [get-the-code]: ../getting-the-code/

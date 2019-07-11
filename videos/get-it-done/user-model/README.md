@@ -3,6 +3,10 @@ title: "Get It Done! Part 5: User Model"
 currentMenu: videos
 ---
 
+## Important Note:
+
+### This series of videos uses `MAMP`, `PHPMyAdmin`, and `MySQL`.  **WE ARE NOT USING THESE TOOLS.** Instead we are using `TablePlus` and `Sqlite3`.
+
 <div class="youtube-wrapper"><iframe width="776" height="437" src="https://www.youtube-nocookie.com/embed/LWnYwdvImCk?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 ## Notes
@@ -18,7 +22,7 @@ In this set of lessons we learn how to set up user accounts in our application, 
 
 ## Code
 
-View the [final code](https://github.com/LaunchCodeEducation/get-it-done/tree/b3f83524df568bd137c73751ce31c12904ce3f85) for this lesson.
+View the [final code](https://github.com/devetrycodeforward/get-it-done/tree/589129a557d09b3789033867811af70a5687b464) for this lesson.
 
 ## References
 
