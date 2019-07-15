@@ -28,7 +28,7 @@ Class # | Prep Work | Studio | Topics | Begin Assignment\* | Objectives | Due As
 8 | [Prep Work](../class-prep/8/) | [Databases Part 2](../studios/databases/2/) | More on Databases and SQL | &nbsp; | [Objectives](../objectives/#class-8) | &nbsp;
 9 | [Prep Work](../class-prep/9/) | [FlickList 6](../studios/flicklist/6/) | Object-Relational Mapping | [Build-a-Blog](../assignments/build-a-blog/) | [Objectives](../objectives/#class-9) | [User Signup](../assignments/user-signup/)
 10 | [Prep Work](../class-prep/10/)| [FlickList 7](../studios/flicklist/7/) | User Objects, Authentication, and Relationships | &nbsp; | [Objectives](../objectives/#class-10) | &nbsp;
-11 | [Prep Work](../class-prep/11/) | | Cookies | [Blogz](../assignments/blogz/) | [Objectives](../objectives/#class-11) | &nbsp;
+11 | [Prep Work](../class-prep/11/) | | Cookies | [Blogz](../assignments/blogz/) | [Objectives](../objectives/#class-11) | [Build-a-Blog](../assignments/build-a-blog/)
 12 | [Prep Work](../class-prep/12/) | [FlickList 8](../studios/flicklist/8/) | The Model-View-Controller Pattern | &nbsp; | [Objectives](../objectives/#class-12) | &nbsp;
 13 | [Prep Work](../class-prep/13/) | [FlickList 9](../studios/flicklist/9/) | Hashing Passwords | &nbsp; | [Objectives](../objectives/#class-13) | [Blogz](../assignments/blogz/)
 14 | [Prep Work](../class-prep/14/) | [FlickList 10](../studios/flicklist/10/)| Bootstrap | &nbsp; | [Objectives](../objectives/#class-14) | &nbsp;
