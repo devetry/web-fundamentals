@@ -35,6 +35,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@loc
 - With these two lines:
 ```python
 project_dir = os.path.dirname(os.path.abspath(__file__))
+```
+```python
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))
 ```
 

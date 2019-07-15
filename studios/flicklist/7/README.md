@@ -7,11 +7,32 @@ Today we'll add *Users* to our application, and allow them to log in, log out, a
 
 You are encouraged to code along, which, as usual, you can do by checking out the `walkthrough7` branch.
 
+
 ## Walkthrough
 
 Thus far, our web app does not have a concept of user accounts built in. As a result, there is only one "communal" movie list, and all the users who visit our site work "collaboratively" on that list. That's kind of cool, maybe, but our goal is a site where each user manages her own list, without interference from other users.
 
 The goal today, at a high level, is to implement the existence of user accounts and registration, and ensure that users cannot see the main pages of the site unless they are logged in.
+
+### Before We Begin: Update the Code to use SQLite3 Instead of MySQL
+
+- Open up the flicklist project in VS Code
+- Open the `main.py` file
+- Below the line `import cgi` at the top of the file, **ADD** the following line:
+```python
+import os
+```
+- **REPLACE** this line:
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@localhost:8889/flicklist'
+```
+- With these two lines:
+```python
+project_dir = os.path.dirname(os.path.abspath(__file__))
+```
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))
+```
 
 More specifically, in today's walkthough we will update our codebase with the following additions:
 
@@ -35,6 +56,26 @@ Right now the only way to login is as a side-effect of creating a new account. I
 ### Checking out the Studio code
 
 Follow the [instructions for getting the code][get-the-code] in order to get the starter code for `studio7`.
+
+### Before you begin: Update the Code to use SQLite3 Instead of MySQL
+
+- Open up the flicklist project in VS Code
+- Open the `main.py` file
+- Below the line `import cgi` at the top of the file, **ADD** the following line:
+```python
+import os
+```
+- **REPLACE** this line:
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@localhost:8889/flicklist'
+```
+- With these two lines:
+```python
+project_dir = os.path.dirname(os.path.abspath(__file__))
+```
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))
+```
 
 ### Before you begin: create the 'user' DB table locally
 
