@@ -198,8 +198,8 @@
 <li><strong>REPLACE</strong> this line:
 <pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@localhost:8889/flicklist'</code></pre></li>
 <li>With these two lines:
-<pre><code class="language-python">project_dir = os.path.dirname(os.path.abspath(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))</code></pre></li>
+<pre><code class="language-python">project_dir = os.path.dirname(os.path.abspath(__file__))</code></pre>
+<pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))</code></pre></li>
 </ul>
 <p>Now that we've added <code>if __name__ == "__main__":</code> to prevent <code>app.run()</code> from running when we load <code>main.py</code> as a module, we can now safely import <code>db</code> and <code>Movie</code> from <code>main.py</code>:</p>
 <pre><code class="language-bash">(flask-env) $ python

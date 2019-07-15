@@ -186,6 +186,18 @@
 <h2 id="walkthrough">Walkthrough</h2>
 <p>Thus far, our web app does not have a concept of user accounts built in. As a result, there is only one &quot;communal&quot; movie list, and all the users who visit our site work &quot;collaboratively&quot; on that list. That's kind of cool, maybe, but our goal is a site where each user manages her own list, without interference from other users.</p>
 <p>The goal today, at a high level, is to implement the existence of user accounts and registration, and ensure that users cannot see the main pages of the site unless they are logged in.</p>
+<h3 id="before-we-begin-update-the-code-to-use-sqlite3-instead-of-mysql">Before We Begin: Update the Code to use SQLite3 Instead of MySQL</h3>
+<ul>
+<li>Open up the flicklist project in VS Code</li>
+<li>Open the <code>main.py</code> file</li>
+<li>Below the line <code>import cgi</code> at the top of the file, <strong>ADD</strong> the following line:
+<pre><code class="language-python">import os</code></pre></li>
+<li><strong>REPLACE</strong> this line:
+<pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@localhost:8889/flicklist'</code></pre></li>
+<li>With these two lines:
+<pre><code class="language-python">project_dir = os.path.dirname(os.path.abspath(__file__))</code></pre>
+<pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))</code></pre></li>
+</ul>
 <p>More specifically, in today's walkthough we will update our codebase with the following additions:</p>
 <ul>
 <li>
@@ -209,6 +221,18 @@
 <p>Right now the only way to login is as a side-effect of creating a new account. It'd be neat if once users created accounts and logged out, they could log back in using their existing email and password, so we'll implement that in this studio. We'll also add validation and authentication for the login process.</p>
 <h3 id="checking-out-the-studio-code">Checking out the Studio code</h3>
 <p>Follow the <a href="../getting-the-code/">instructions for getting the code</a> in order to get the starter code for <code>studio7</code>.</p>
+<h3 id="before-you-begin-update-the-code-to-use-sqlite3-instead-of-mysql">Before you begin: Update the Code to use SQLite3 Instead of MySQL</h3>
+<ul>
+<li>Open up the flicklist project in VS Code</li>
+<li>Open the <code>main.py</code> file</li>
+<li>Below the line <code>import cgi</code> at the top of the file, <strong>ADD</strong> the following line:
+<pre><code class="language-python">import os</code></pre></li>
+<li><strong>REPLACE</strong> this line:
+<pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@localhost:8889/flicklist'</code></pre></li>
+<li>With these two lines:
+<pre><code class="language-python">project_dir = os.path.dirname(os.path.abspath(__file__))</code></pre>
+<pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))</code></pre></li>
+</ul>
 <h3 id="before-you-begin-create-the-user-db-table-locally">Before you begin: create the 'user' DB table locally</h3>
 <pre><code class="language-nohighlight">(flicklist) $ python
 &gt;&gt;&gt; from main import db, User
