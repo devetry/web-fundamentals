@@ -227,7 +227,7 @@
 <pre><code class="language-python">import os</code></pre>
 <p>Then change the connection string on this line of <code>main.py</code> so that it reflects this new database:</p>
 <pre><code class="language-python">project_dir = os.path.dirname(os.path.abspath(__file__))</code></pre>
-<pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))</code></pre>
+<pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "blogz.db"))</code></pre>
 <p>Then you'll need to initialize your new database:</p>
 <pre><code class="language-nohighlight">(flask-env) $ python
 from main import db
