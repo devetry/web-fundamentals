@@ -62,7 +62,7 @@ Then change the connection string on this line of `main.py` so that it reflects 
 project_dir = os.path.dirname(os.path.abspath(__file__))
 ```
 ```python
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "blogz.db"))
 ```
 
 Then you'll need to initialize your new database:
