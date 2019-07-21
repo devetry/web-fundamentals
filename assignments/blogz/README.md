@@ -46,10 +46,23 @@ Now you can `cd` into the `blogz` repo on your computer and start adding to and 
 Be sure to activate your virtual environment once you `cd` into your new repo: `source activate flask-env`.
 </aside>
 
-One very important change we still need to make is to the database. We'll want to make a new database specific to this assignment, and then alter our database connection string in `main.py` so that it uses this database (and the associated user/password). So follow the instructions for [creating a new database](../../studios/flicklist/6/#create-mysql-user-and-database) using `blogz` as your user name and a password of your choice. Then change the connection string on this line of `main.py` so that it reflects this new database:
+One very important change we still need to make is to the database. We'll want to make a new database specific to this assignment, and then alter our database connection string in `main.py` so that it uses this database.  
+
+So follow the instructions for [creating a new database](../../studios/flicklist/6/#create-mysql-user-and-database).
+
+Be sure to import the `os` module at the top of your file:
 
 ```python
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://blogz:password@localhost:8889/blogz'
+import os
+```
+
+Then change the connection string on this line of `main.py` so that it reflects this new database:
+
+```python
+project_dir = os.path.dirname(os.path.abspath(__file__))
+```
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))
 ```
 
 Then you'll need to initialize your new database:
