@@ -27,14 +27,16 @@ Notice that we are no longer littering your studio code with `TODO`s. Your instr
     - **Model:**  Move the `User` and `Movie` classes to a file named `models.py`. Then refactor out the app and database configuration code to a file named `app.py`. Specifically, the `app.py` file will have these 7 lines:
 
     ```python
+    import os
     from flask import Flask
     from flask_sqlalchemy import SQLAlchemy
 
     app = Flask(__name__)
     app.config['DEBUG'] = True      # displays runtime errors in the browser, too
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flicklist:MyNewPass@localhost:8889/flicklist'
-    app.config['SQLALCHEMY_ECHO'] = True
-
+    app.config['SQLALCHEMY_ECHO'] = True # displays SQL output to the console
+    project_dir = os.path.dirname(os.path.abspath(__file__)) # grab the current project directory
+    app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))
+    
     db = SQLAlchemy(app)
     ```
 
