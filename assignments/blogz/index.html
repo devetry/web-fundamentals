@@ -221,8 +221,13 @@
 <aside class="aside-note">
 <p>Be sure to activate your virtual environment once you <code>cd</code> into your new repo: <code>source activate flask-env</code>.</p>
 </aside>
-<p>One very important change we still need to make is to the database. We'll want to make a new database specific to this assignment, and then alter our database connection string in <code>main.py</code> so that it uses this database (and the associated user/password). So follow the instructions for <a href="../../studios/flicklist/6/#create-mysql-user-and-database">creating a new database</a> using <code>blogz</code> as your user name and a password of your choice. Then change the connection string on this line of <code>main.py</code> so that it reflects this new database:</p>
-<pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://blogz:password@localhost:8889/blogz'</code></pre>
+<p>One very important change we still need to make is to the database. We'll want to make a new database specific to this assignment, and then alter our database connection string in <code>main.py</code> so that it uses this database.  </p>
+<p>So follow the instructions for <a href="../../studios/flicklist/6/#create-mysql-user-and-database">creating a new database</a>.</p>
+<p>Be sure to import the <code>os</code> module at the top of your file:</p>
+<pre><code class="language-python">import os</code></pre>
+<p>Then change the connection string on this line of <code>main.py</code> so that it reflects this new database:</p>
+<pre><code class="language-python">project_dir = os.path.dirname(os.path.abspath(__file__))</code></pre>
+<pre><code class="language-python">app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///{}".format(os.path.join(project_dir, "flicklist.db"))</code></pre>
 <p>Then you'll need to initialize your new database:</p>
 <pre><code class="language-nohighlight">(flask-env) $ python
 from main import db
