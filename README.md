@@ -31,4 +31,4 @@ Class # | Prep Work | Studio | Topics | Begin Assignment\* | Objectives | Due As
 11 | [Prep Work](../class-prep/11/) | | Cookies | [Blogz](../assignments/blogz/) | [Objectives](../objectives/#class-11) | [Build-a-Blog](../assignments/build-a-blog/)
 12 | [Prep Work](../class-prep/12/) | [FlickList 8](../studios/flicklist/8/) | The Model-View-Controller Pattern | &nbsp; | [Objectives](../objectives/#class-12) | &nbsp;
 13 | [Prep Work](../class-prep/13/) | [FlickList 9](../studios/flicklist/9/) | Hashing Passwords | &nbsp; | [Objectives](../objectives/#class-13) | [Blogz](../assignments/blogz/)
-14 | [Prep Work](../class-prep/14/) | [FlickList 10](../studios/flicklist/10/)| Bootstrap | &nbsp; | [Objectives](../objectives/#class-14) | &nbsp;
+14 | [Prep Work](../class-prep/14/) | [FlickList 10](../studios/flicklist/10/)| Flexbox | &nbsp; | [Objectives](../objectives/#class-14) | &nbsp;

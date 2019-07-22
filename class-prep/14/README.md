@@ -3,37 +3,20 @@ title: Class 14 Prep
 currentMenu: classes
 ---
 
-## Bootstrap
+## Flexbox
+
+Flexbox is a new(er) CSS Module that enables easy `mobile-first` development that allows our applications to look at home in any screen size.  The ability to look good (and adapt) on any screen is called **responsiveness**. A [responsive site](https://en.wikipedia.org/wiki/Responsive_web_design) is one that adapts to different screen sizes, such as desktop, tablet, and mobile.
+
+### A Note on Bootstrap
 
 Bootstrap is a front-end web framework built out of HTML, CSS and Javascript that makes building attractive, polished, and highly functional sites straightforward.
 
-You are already familiar with HTML and CSS, but might not know what Javascript is. Javascript, which has no relation to the programming language Java, is a computer programming language used to make web pages *interactive* and that runs on the user's browser. We won't go into detail about Javascript in this class, but it is occasionaly mentioned in the resources below. In the context of Bootstrap, it is Javascript (and particularly the Javascript library jQuery) that provides the functionality for many of Bootstrap's plugins.
+This class previously taught `Bootstrap`, however it is fast becoming an outdated technology.  As such, we will focus our efforts instead learning the much more modern CSS module, `Flexbox`. 
 
-Bootstrap is widely used to make **responsive** websites. A [responsive site](https://en.wikipedia.org/wiki/Responsive_web_design) is one that adapts to different screen sizes, such as desktop, tablet, and mobile.
-
-In this lesson, you'll learn a bit about Bootstrap. We'll use this knowledge in class to incorporate Bootstrap into Flicklist.
+In this lesson, you'll learn a bit about Flexbox. We'll use this knowledge in class to incorporate Flexbox into Flicklist.
 
 Done |Task | Resource Type | Link | Instructions
 |----|-----|---------------|------|-------------|
-<input type="checkbox" v-model="checks.p14a" /> |Read | Article | [What is Bootstrap? A Beginner's Guide](https://careerfoundry.com/en/blog/web-development/what-is-bootstrap-a-beginners-guide/) | Read this nice introduction to Boostrap
-<input type="checkbox" v-model="checks.p14b" /> |Do | Interactive Lesson | [Bootstrap Tutorial (w3schools)](https://www.w3schools.com/bootstrap/default.asp) | Work through all the lessons under "Bootstrap Tutorial" and the lessons under "Bootstrap Grids" to learn how to use Bootstrap within a website.
-<input type="checkbox" v-model="checks.p14c" /> |Read | Tutorial | [Tutorial Republic](http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/) | This is *optional*, but if you want another resource that explains Bootstrap usage in more detail, you can check out this tutorial.
-<input type="checkbox" v-model="checks.p14d" /> |Read | Reference | [Bootstrap](http://getbootstrap.com/components/) | Also an *optional* resource, this is where you can read the official documentation for Bootstrap.
-
-An easy way to begin using Bootstrap in your own applications is to use a Bootstrap theme. You can get these for free at [Bootswatch](https://bootswatch.com/). For details on how to use each theme, just click on the "Preview" button for the theme you like.
-
-![Bootswatch](images/bootswatch.png)
-
-Then click on the component you want to know how to use or what it will look like.
-
-![Bootswatch Menu](images/bootswatch-menu.png)
-
-For instance if we click on Navbar in the menu above, this is what we'll see:
-
-![Navbar](images/navbar.png)
-
-And if we click on the double arrows (circled red in the above screenshot), we'll see the source code for how to use it:
-
-![Source Code](images/source.png)
-
-The best way to learn Bootstrap is to play around with adding different components to the web pages you are building, and see what they look like and how adding these classes affects the presentation. Now go have fun with Bootstrap!
+<input type="checkbox" v-model="checks.p14b" /> |Watch | Code Along | [Learn Flex-box layout in 15 minutes](https://www.youtube.com/watch?v=fqNPSSoMO9Y) | Code along with the video
+<input type="checkbox" v-model="checks.p14c" /> |Read | Explanation | [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) | A must-read reference.  Play with the in-line code examples.
+<input type="checkbox" v-model="checks.p14d" /> |Do | Activity | [Flexbox Froggy](https://flexboxfroggy.com/) | Complete levels 1 - 24
