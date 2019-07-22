@@ -20,3 +20,4 @@ Done |Task | Resource Type | Link | Instructions
 <input type="checkbox" v-model="checks.p14b" /> |Watch | Code Along | [Learn Flex-box layout in 15 minutes](https://www.youtube.com/watch?v=fqNPSSoMO9Y) | Code along with the video
 <input type="checkbox" v-model="checks.p14c" /> |Read | Explanation | [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) | A must-read reference.  Play with the in-line code examples.
 <input type="checkbox" v-model="checks.p14d" /> |Do | Activity | [Flexbox Froggy](https://flexboxfroggy.com/) | Complete levels 1 - 24
+<input type="checkbox" v-model="checks.p14b" /> |Read | Code Along | [CSS Media Queries](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp) | Learn how to apply different CSS styles based upon the screen width
