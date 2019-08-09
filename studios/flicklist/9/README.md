@@ -11,7 +11,7 @@ We've added all of the main user-facing features to the Flicklist application. O
 
 ### Checking Out the Studio code
 
-Follow the [instructions for getting the code][get-the-code] in order to get the starter code for `studio9`. As usual, remember to start up your MAMP servers and activate `flask-env`.
+Follow the [instructions for getting the code][get-the-code] in order to get the starter code for `studio9`. As usual, remember to update your database connection strings to use Sqlite3.
 
 ### Your tasks
 
